@@ -27,6 +27,16 @@
     
     self.views = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-49)];
     
+    UIImageView *imgViews = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    imgViews.image = [UIImage imageNamed:@"back_about.jpg"];
+    [self.views addSubview:imgViews];
+    
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:effect];
+    effectView.frame =CGRectMake(0, 0, kScreenWidth, kScreenHeight-49);
+    effectView.alpha = 0.5;
+    [imgViews addSubview:effectView];
+    
     CGFloat h = kScreenHeight+64;
     
     
@@ -36,6 +46,9 @@
     textV.editable = NO;
     [textV setFont:[UIFont fontWithName:@"Arial" size:20]];
     [self.views addSubview:textV];
+    
+    
+
     
     
     self.views.backgroundColor = [UIColor colorWithRed:0.410 green:0.386 blue:0.358 alpha:0.5];
@@ -64,30 +77,26 @@
     [self.view2 addSubview:imgViews];
     
     
-    UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(x, y, 80, 80)];
+    UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(x, y*11/10, 80, 80)];
     
     imgView.image = [UIImage imageNamed:@"logo.jpg"];
     
     
     
     
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn.frame=CGRectMake(kScreenWidth/4, y*5/12, kScreenWidth/2, (kScreenHeight-49)/15);
+    [btn setTitle:@"GlobalTravel(点击详解)" forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:18];
     
-    UIButton *btn_1 = [[UIButton alloc]initWithFrame:CGRectMake(0, y/3, kScreenWidth, (kScreenWidth-49)/6)];
-    [btn_1 addTarget:self action:@selector(Action) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(Action) forControlEvents:UIControlEventTouchUpInside];
     
     
     
     NSString *str_1 = @"(∩ᵒ̴̶̷̤⌔ᵒ̴̶̷̤∩)";
-    UILabel *lable_1 = [[UILabel alloc]initWithFrame:CGRectMake(0, y*3/2, kScreenWidth, (kScreenHeight-49)/6)];
+    UILabel *lable_1 = [[UILabel alloc]initWithFrame:CGRectMake(0, y*14/9, kScreenWidth, (kScreenHeight-49)/8)];
     lable_1.text = str_1;
     lable_1.textAlignment = NSTextAlignmentCenter;
-    
-    NSString *str_2 = @"GlobalTravel(点击详解)";
-    
-    UILabel *lable_2 = [[UILabel alloc]initWithFrame:CGRectMake(0, y/3, kScreenWidth, (kScreenHeight-49)/6)];
-    lable_2.text = str_2;
-    lable_2.textAlignment = NSTextAlignmentCenter;
-    
     
     UILabel *label_5 = [[UILabel alloc]initWithFrame:CGRectMake(0, y*4/7, kScreenWidth, (kScreenHeight-49)/6)];
     label_5.text = @"感谢您的支持!";
@@ -95,19 +104,21 @@
     
     [self.view2 addSubview:label_5];
     
-    [self.view2 addSubview:lable_2];
     [self.view2 addSubview:lable_1];
     
     
-    [self.view2 addSubview:btn_1];
+    [self.view2 addSubview:btn];
     
     [self.view2 addSubview:imgView];
     
     
-    UILabel *label_3 = [[UILabel alloc]initWithFrame:CGRectMake(0, (kScreenHeight-49)*4/5, kScreenWidth, (kScreenHeight-49)/10)];
-    UILabel *label_4 = [[UILabel alloc]initWithFrame:CGRectMake(0, (kScreenHeight-49)*9/10, kScreenWidth, (kScreenHeight-49)/10)];
+    UILabel *label_3 = [[UILabel alloc]initWithFrame:CGRectMake(0, (kScreenHeight-49)*9/10, kScreenWidth, (kScreenHeight-49)/20)];
+    UILabel *label_4 = [[UILabel alloc]initWithFrame:CGRectMake(0, (kScreenHeight-49)*19/20, kScreenWidth, (kScreenHeight-49)/20)];
     label_3.text = @"版本 V1.0.0";
     label_4.text = @"(c)2016 蓝欧科技";
+    
+    label_4.font = [UIFont systemFontOfSize:12];
+    label_4.textColor = [UIColor colorWithWhite:0.289 alpha:1.000];
     
     label_3.textAlignment = NSTextAlignmentCenter;
     label_4.textAlignment = NSTextAlignmentCenter;
@@ -137,7 +148,7 @@
 -(void)Action
 {
     //    [UIView transitionFromView:self.view2 toView:self.views duration:1 options:UIViewAnimationOptionTransitionCrossDissolve completion:nil];
-    [UIView transitionFromView:self.view2 toView:self.views duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {
+    [UIView transitionFromView:self.view2 toView:self.views duration:0.1 options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {
         [self.view bringSubviewToFront:self.views];
     }];
 }
@@ -148,7 +159,7 @@
 {
     
     //    [UIView transitionFromView:self.views toView:self.view2 duration:1 options:UIViewAnimationOptionTransitionCrossDissolve completion:nil];
-    [UIView transitionFromView:self.views toView:self.view2 duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {
+    [UIView transitionFromView:self.views toView:self.view2 duration:0.1 options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {
         [self.view sendSubviewToBack:self.view2];
     }];
     

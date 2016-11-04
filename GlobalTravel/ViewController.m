@@ -323,10 +323,10 @@
             
         }];
         
-        //评分
-        RESideMenuItem *testItem3 = [[RESideMenuItem alloc]initWithTitle:@"评分" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            NSLog(@"点击了评分");
-        }];
+//        //评分
+//        RESideMenuItem *testItem3 = [[RESideMenuItem alloc]initWithTitle:@"评分" action:^(RESideMenu *menu, RESideMenuItem *item) {
+//            NSLog(@"点击了评分");
+//        }];
         
         //意见反馈
         RESideMenuItem *testItem4 = [[RESideMenuItem alloc]initWithTitle:@"意见反馈" action:^(RESideMenu *menu, RESideMenuItem *item) {
@@ -345,7 +345,7 @@
         }];
         
         
-        self.sideMenu = [[RESideMenu alloc]initWithItems:@[testItem,testItem1,testItem2,testItem3,testItem4]];
+        self.sideMenu = [[RESideMenu alloc]initWithItems:@[testItem,testItem1,testItem2,testItem4]];
         self.sideMenu.backgroundImage = [UIImage imageNamed:@"background.jpg"];
     }
     

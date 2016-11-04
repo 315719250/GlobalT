@@ -50,7 +50,7 @@
     
     
     self.lable1.text = @"感谢您愿意给我们意见";
-    self.lable2.text = @"下面是我们的工作邮箱，您有任何疑问都可以跟我们交流";
+    self.lable2.text = @"下面是我们的工作邮箱，欢迎交流";
     self.lable3.text = @"315719250@qq.com";
     self.lable4.text = @"我们保证在第一时间答复您的疑问！";
     self.lable5.text = @"我们真诚的希望您能给予我们宝贵的意见，谢谢！";
