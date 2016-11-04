@@ -85,7 +85,7 @@
     
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    btn.frame=CGRectMake(kScreenWidth/4, y*5/12, kScreenWidth/2, (kScreenHeight-49)/15);
+    btn.frame=CGRectMake(0, y*5/12, kScreenWidth, (kScreenHeight-49)/15);
     [btn setTitle:@"GlobalTravel(点击详解)" forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize:18];
     
