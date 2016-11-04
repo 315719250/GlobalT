@@ -28,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"意见与反馈";
 
     self.view.backgroundColor = [UIColor whiteColor];
 
@@ -37,7 +39,7 @@
     
 
     UIImageView *imgView = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    imgView.image = [UIImage imageNamed:@"advice.jpg"];
+    imgView.image = [UIImage imageNamed:@"backAdvice.jpg"];
     [self.view addSubview:imgView];
     
     self.lable1 = [[UILabel alloc]initWithFrame:CGRectMake(10, kScreenHeight/36+64, kScreenWidth-20, kScreenHeight/6)];
@@ -47,11 +49,11 @@
     self.lable5 = [[UILabel alloc]initWithFrame:CGRectMake(10, kScreenHeight*29/36+64, kScreenWidth-20, kScreenHeight/6)];
     
     
-    self.lable1.text = @"感谢您愿意给我们意见，请随意";
-    self.lable2.text = @"下面是老子的邮箱，敢乱发老子打死你";
-    self.lable3.text = @"某人的邮件";
-    self.lable4.text = @"意见写了，快给老子滚开";
-    self.lable5.text = @"你回来。过来，跟你说个事，滚远一点！";
+    self.lable1.text = @"感谢您愿意给我们意见";
+    self.lable2.text = @"下面是我们的工作邮箱，您有任何疑问都可以跟我们交流";
+    self.lable3.text = @"315719250@qq.com";
+    self.lable4.text = @"我们保证在第一时间答复您的疑问！";
+    self.lable5.text = @"我们真诚的希望您能给予我们宝贵的意见，谢谢！";
     
     self.lable1.font = [UIFont systemFontOfSize:40];
     

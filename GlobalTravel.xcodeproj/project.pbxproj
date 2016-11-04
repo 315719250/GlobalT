@@ -66,6 +66,9 @@
 		3FF349B11DC8C6CF00C7A9CD /* TravelHealthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF349B01DC8C6CF00C7A9CD /* TravelHealthCell.m */; };
 		3FF349B41DC8C6FB00C7A9CD /* HealthWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF349B31DC8C6FB00C7A9CD /* HealthWebVC.m */; };
 		3FF349B71DC8D36300C7A9CD /* AppTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF349B61DC8D36300C7A9CD /* AppTool.m */; };
+		3FFF47891DCC5EAF0013801F /* back_about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF47881DCC5EAF0013801F /* back_about.jpg */; settings = {ASSET_TAGS = (); }; };
+		3FFF478B1DCC5EB40013801F /* backAdvice.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF478A1DCC5EB40013801F /* backAdvice.jpg */; settings = {ASSET_TAGS = (); }; };
+		3FFF478D1DCC5F2B0013801F /* back_help.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF478C1DCC5F2B0013801F /* back_help.jpg */; settings = {ASSET_TAGS = (); }; };
 		9D1350C31DC05B1100B26D62 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D1350C21DC05B1100B26D62 /* background.jpg */; };
 		9D1350C51DC05BEA00B26D62 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1350C41DC05BEA00B26D62 /* menu.png */; };
 		9D1350D51DC0837200B26D62 /* AccelerationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1350C81DC0837200B26D62 /* AccelerationAnimation.m */; };
@@ -152,7 +155,6 @@
 		9DF276011DC1DD8A00682670 /* XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF275FA1DC1DD8A00682670 /* XHLaunchAd.m */; };
 		9DF276021DC1DD8A00682670 /* XHWebImageDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF275FC1DC1DD8A00682670 /* XHWebImageDownload.m */; };
 		9DF276091DC1F92F00682670 /* aboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF276071DC1F92F00682670 /* aboutViewController.m */; };
-		9DF2760A1DC1F92F00682670 /* aboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DF276081DC1F92F00682670 /* aboutViewController.xib */; };
 		9DF276231DC1FE1000682670 /* SoutheastAsia_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DF2760F1DC1FE1000682670 /* SoutheastAsia_1.jpg */; };
 		9DF276241DC1FE1000682670 /* SoutheastAsia_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DF276101DC1FE1000682670 /* SoutheastAsia_2.jpg */; };
 		9DF276271DC1FE1000682670 /* domestic_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DF276141DC1FE1000682670 /* domestic_1.jpg */; };
@@ -274,6 +276,9 @@
 		3FF349B31DC8C6FB00C7A9CD /* HealthWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthWebVC.m; sourceTree = "<group>"; };
 		3FF349B51DC8D36300C7A9CD /* AppTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTool.h; sourceTree = "<group>"; };
 		3FF349B61DC8D36300C7A9CD /* AppTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTool.m; sourceTree = "<group>"; };
+		3FFF47881DCC5EAF0013801F /* back_about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back_about.jpg; sourceTree = "<group>"; };
+		3FFF478A1DCC5EB40013801F /* backAdvice.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backAdvice.jpg; sourceTree = "<group>"; };
+		3FFF478C1DCC5F2B0013801F /* back_help.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back_help.jpg; sourceTree = "<group>"; };
 		9D1350C21DC05B1100B26D62 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		9D1350C41DC05BEA00B26D62 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		9D1350C71DC0837200B26D62 /* AccelerationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerationAnimation.h; sourceTree = "<group>"; };
@@ -422,7 +427,6 @@
 		9DF275FC1DC1DD8A00682670 /* XHWebImageDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHWebImageDownload.m; sourceTree = "<group>"; };
 		9DF276061DC1F92F00682670 /* aboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutViewController.h; sourceTree = "<group>"; };
 		9DF276071DC1F92F00682670 /* aboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutViewController.m; sourceTree = "<group>"; };
-		9DF276081DC1F92F00682670 /* aboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = aboutViewController.xib; sourceTree = "<group>"; };
 		9DF2760F1DC1FE1000682670 /* SoutheastAsia_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SoutheastAsia_1.jpg; sourceTree = "<group>"; };
 		9DF276101DC1FE1000682670 /* SoutheastAsia_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SoutheastAsia_2.jpg; sourceTree = "<group>"; };
 		9DF276141DC1FE1000682670 /* domestic_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = domestic_1.jpg; sourceTree = "<group>"; };
@@ -894,8 +898,11 @@
 				9DF2760D1DC1FE1000682670 /* Pic_00 */,
 				9DF276341DC1FE5C00682670 /* collect.png */,
 				3F9E35BA1DC74C1E003B7478 /* advice.jpg */,
+				3FFF478C1DCC5F2B0013801F /* back_help.jpg */,
+				3FFF478A1DCC5EB40013801F /* backAdvice.jpg */,
 				3F0240DA1DC6D70B006305E0 /* logo.jpg */,
 				9D1350C41DC05BEA00B26D62 /* menu.png */,
+				3FFF47881DCC5EAF0013801F /* back_about.jpg */,
 				9D1350C21DC05B1100B26D62 /* background.jpg */,
 				3F0241251DC7744F006305E0 /* menuback.png */,
 				9DE5436F1DBE24DF006AF0F9 /* main.m */,
@@ -1048,7 +1055,6 @@
 			children = (
 				9DF276061DC1F92F00682670 /* aboutViewController.h */,
 				9DF276071DC1F92F00682670 /* aboutViewController.m */,
-				9DF276081DC1F92F00682670 /* aboutViewController.xib */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -1259,6 +1265,7 @@
 				3F9E35C31DC7655A003B7478 /* Hot.jpg in Resources */,
 				3F299F501DC72B6200FC6BD9 /* Overseas_4.jpg in Resources */,
 				9D6F1AD31DC9765D00E9B6B0 /* TravelEquipment_1.jpg in Resources */,
+				3FFF478B1DCC5EB40013801F /* backAdvice.jpg in Resources */,
 				3F0241181DC733BB006305E0 /* background_1.JPG in Resources */,
 				3F299F501DC72B6200FC6BD9 /* Overseas_4.jpg in Resources */,
 				3F0241181DC733BB006305E0 /* background_1.JPG in Resources */,
@@ -1297,10 +1304,11 @@
 				9D6F1AE01DC9808A00E9B6B0 /* TravelHelth_4.jpg in Resources */,
 				9D6F1AD01DC9765D00E9B6B0 /* Hike_2.jpg in Resources */,
 				3F0051AE1DC37E23009143CB /* 4.png in Resources */,
-				9DF2760A1DC1F92F00682670 /* aboutViewController.xib in Resources */,
 				9D6F1ADC1DC9765D00E9B6B0 /* TravelingTips_2.jpg in Resources */,
 				9DF276321DC1FE1000682670 /* island_3.jpg in Resources */,
+				3FFF47891DCC5EAF0013801F /* back_about.jpg in Resources */,
 				3F02411B1DC733BB006305E0 /* background_4.JPG in Resources */,
+				3FFF478D1DCC5F2B0013801F /* back_help.jpg in Resources */,
 				3F0240F81DC6E8BE006305E0 /* MJRefresh.bundle in Resources */,
 				3F0241111DC730D2006305E0 /* back.png in Resources */,
 				9D1350C51DC05BEA00B26D62 /* menu.png in Resources */,

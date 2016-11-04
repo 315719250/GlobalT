@@ -100,7 +100,7 @@
     self.title = @"或许有这样的疑问";
     
     UIImageView *imgView = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    imgView.image = [UIImage imageNamed:@"Help_background.jpg"];
+    imgView.image = [UIImage imageNamed:@"back_help.jpg"];
     [self.view addSubview: imgView];
 
     
