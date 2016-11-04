@@ -128,9 +128,13 @@
 - (void)headerRereshing
 {
     // 1.添加假数据
-    [self.dataArray removeAllObjects];
-    self.i = 1;
-    [self loadData];
+    if (self.dataArray.count == 0) {
+        self.i = 1;
+        [self loadData];
+    }else{
+        self.i = 0;
+        [self loadData];
+    }
     
     
     // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
@@ -147,8 +151,14 @@
 - (void)footerRereshing
 {
     // 1.添加假数据
-    self.i += 1;
-    [self loadData];
+    if (self.i == 0) {
+        self.i = 1;
+        self.i += 1;
+        [self loadData];
+    }else{
+        self.i += 1;
+        [self loadData];
+    }
     
     // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -181,7 +191,10 @@
     
     self.i = 1;
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"2.png"] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];;
+    UIImage *img = [UIImage imageNamed:@"2.png"];
+    //设置图片本身不被修改
+    img = [img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:img style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];;
     
     
     [self createtableview];

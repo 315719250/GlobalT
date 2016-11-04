@@ -47,7 +47,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"旅游工具";
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
+    
+    UIImage *img = [UIImage imageNamed:@"back.png"];
+    //设置图片本身不被修改
+    img = [img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:img style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
     
     [self tableDelegate];
     

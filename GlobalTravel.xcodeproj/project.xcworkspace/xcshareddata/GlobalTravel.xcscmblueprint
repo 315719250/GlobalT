@@ -1,5 +1,5 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "89D5348762C4F344C93AE4277406C3FAB375AEF8",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E01B032FF630F361DBEF6FCED3E32A9EDAAD4134",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
     "4888A15CC7622155180F21F4B636C00DD88B0704" : {
 
@@ -7,12 +7,14 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "89D5348762C4F344C93AE4277406C3FAB375AEF8" : 0,
-    "4888A15CC7622155180F21F4B636C00DD88B0704" : 0
+    "4888A15CC7622155180F21F4B636C00DD88B0704" : 0,
+    "E01B032FF630F361DBEF6FCED3E32A9EDAAD4134" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3EDE9E1A-F34D-495F-B13B-2FB7BF5E80A4",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "89D5348762C4F344C93AE4277406C3FAB375AEF8" : "Global\/",
-    "4888A15CC7622155180F21F4B636C00DD88B0704" : "GlobalTravel\/"
+    "4888A15CC7622155180F21F4B636C00DD88B0704" : "GlobalTravel\/",
+    "E01B032FF630F361DBEF6FCED3E32A9EDAAD4134" : "GlobalT\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "GlobalTravel",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -27,6 +29,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/315719250\/Global.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "89D5348762C4F344C93AE4277406C3FAB375AEF8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/315719250\/GlobalT.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E01B032FF630F361DBEF6FCED3E32A9EDAAD4134"
     }
   ]
 }
