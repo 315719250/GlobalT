@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "89D5348762C4F344C93AE4277406C3FAB375AEF8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "4888A15CC7622155180F21F4B636C00DD88B0704" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "89D5348762C4F344C93AE4277406C3FAB375AEF8" : 0,
+    "4888A15CC7622155180F21F4B636C00DD88B0704" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3EDE9E1A-F34D-495F-B13B-2FB7BF5E80A4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "89D5348762C4F344C93AE4277406C3FAB375AEF8" : "Global\/",
+    "4888A15CC7622155180F21F4B636C00DD88B0704" : "GlobalTravel\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GlobalTravel",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GlobalTravel.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/www.svnchina.com\/svn\/caonimei123",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4888A15CC7622155180F21F4B636C00DD88B0704"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/315719250\/Global.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "89D5348762C4F344C93AE4277406C3FAB375AEF8"
+    }
+  ]
+}
