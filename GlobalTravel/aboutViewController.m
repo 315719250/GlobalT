@@ -25,7 +25,7 @@
 {
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menuback.png"] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
     
-    self.views = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    self.views = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-49)];
     
     CGFloat h = kScreenHeight+64;
     
@@ -52,7 +52,7 @@
 -(void)view2f{
     CGFloat x = (kScreenWidth-80)/2;
     
-    CGFloat y = (kScreenHeight-80)/2;
+    CGFloat y = ((kScreenHeight-49)-80)/2;
     
     self.view2 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     self.view2.backgroundColor = [UIColor whiteColor];
@@ -72,24 +72,24 @@
     
     
     
-    UIButton *btn_1 = [[UIButton alloc]initWithFrame:CGRectMake(0, y/3, kScreenWidth, kScreenWidth/6)];
+    UIButton *btn_1 = [[UIButton alloc]initWithFrame:CGRectMake(0, y/3, kScreenWidth, (kScreenWidth-49)/6)];
     [btn_1 addTarget:self action:@selector(Action) forControlEvents:UIControlEventTouchUpInside];
     
     
     
     NSString *str_1 = @"(∩ᵒ̴̶̷̤⌔ᵒ̴̶̷̤∩)";
-    UILabel *lable_1 = [[UILabel alloc]initWithFrame:CGRectMake(0, y*3/2, kScreenWidth, kScreenHeight/6)];
+    UILabel *lable_1 = [[UILabel alloc]initWithFrame:CGRectMake(0, y*3/2, kScreenWidth, (kScreenHeight-49)/6)];
     lable_1.text = str_1;
     lable_1.textAlignment = NSTextAlignmentCenter;
     
     NSString *str_2 = @"GlobalTravel(点击详解)";
     
-    UILabel *lable_2 = [[UILabel alloc]initWithFrame:CGRectMake(0, y/3, kScreenWidth, kScreenHeight/6)];
+    UILabel *lable_2 = [[UILabel alloc]initWithFrame:CGRectMake(0, y/3, kScreenWidth, (kScreenHeight-49)/6)];
     lable_2.text = str_2;
     lable_2.textAlignment = NSTextAlignmentCenter;
     
     
-    UILabel *label_5 = [[UILabel alloc]initWithFrame:CGRectMake(0, y*4/7, kScreenWidth, kScreenHeight/6)];
+    UILabel *label_5 = [[UILabel alloc]initWithFrame:CGRectMake(0, y*4/7, kScreenWidth, (kScreenHeight-49)/6)];
     label_5.text = @"感谢您的支持!";
     label_5.textAlignment = NSTextAlignmentCenter;
     
@@ -104,8 +104,8 @@
     [self.view2 addSubview:imgView];
     
     
-    UILabel *label_3 = [[UILabel alloc]initWithFrame:CGRectMake(0, kScreenHeight*4/5, kScreenWidth, kScreenHeight/10)];
-    UILabel *label_4 = [[UILabel alloc]initWithFrame:CGRectMake(0, kScreenHeight*9/10, kScreenWidth, kScreenHeight/10)];
+    UILabel *label_3 = [[UILabel alloc]initWithFrame:CGRectMake(0, (kScreenHeight-49)*4/5, kScreenWidth, (kScreenHeight-49)/10)];
+    UILabel *label_4 = [[UILabel alloc]initWithFrame:CGRectMake(0, (kScreenHeight-49)*9/10, kScreenWidth, (kScreenHeight-49)/10)];
     label_3.text = @"版本 V1.0.0";
     label_4.text = @"(c)2016 蓝欧科技";
     

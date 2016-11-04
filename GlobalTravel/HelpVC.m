@@ -22,7 +22,7 @@
 
 -(void)tableDelegate
 {
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,  64,[UIScreen mainScreen].bounds.size.width , [UIScreen mainScreen].bounds.size.height-64)];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,  64,[UIScreen mainScreen].bounds.size.width , [UIScreen mainScreen].bounds.size.height-113)];
     
     self.tableView.backgroundColor = [UIColor clearColor];
     
