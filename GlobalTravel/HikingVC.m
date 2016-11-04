@@ -132,8 +132,14 @@
         self.i = 1;
         [self loadData];
     }else{
-        self.i = 0;
+        
+        [self.dataArray removeAllObjects];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableview reloadData];
+        });
+        self.i=1;
         [self loadData];
+        
     }
     
     
@@ -196,7 +202,6 @@
     img = [img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:img style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];;
     
-    
     [self createtableview];
     
     //数据解析
@@ -223,7 +228,10 @@
     return (kScreenHeight-64)/3;
     
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.00000001;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.dataArray.count;

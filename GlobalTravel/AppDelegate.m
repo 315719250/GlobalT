@@ -11,6 +11,7 @@
 #import "ViewController.h"
 #import "RelexMoment.h"
 
+
 //动态广告
 #define ImgUrlString @"http://c.hiphotos.baidu.com/image/pic/item/d62a6059252dd42a6a943c180b3b5bb5c8eab8e7.jpg"
 
@@ -126,10 +127,10 @@
 {
     //创建视图
     //咨询
-    ViewController *firstVC = (ViewController *)[self creatVCwithClass:[ViewController class] tittle:@"旅行咨询" normalImage:@"menu.png" selectedImage:@"collect.png"];
+    ViewController *firstVC = (ViewController *)[self creatVCwithClass:[ViewController class] tittle:@"" normalImage:@"zy.png" selectedImage:@"zy1.png"];
     
     //视频
-    RelexMoment *relexVC = (RelexMoment *)[self creatVCwithClass:[RelexMoment class] tittle:@"轻松一刻" normalImage:@"4.png" selectedImage:@"5.png"];
+    RelexMoment *relexVC = (RelexMoment *)[self creatVCwithClass:[RelexMoment class] tittle:@"" normalImage:@"sp.png" selectedImage:@"sp1.png"];
     
         UINavigationController *firstNav=[[UINavigationController alloc]initWithRootViewController:firstVC];
         UINavigationController *relexNav=[[UINavigationController alloc]initWithRootViewController:relexVC];
@@ -160,7 +161,7 @@
     
 //    tabbarVC.tabBar.translucent=NO;
     
-    tabbarVC.tabBar.barTintColor=[UIColor lightGrayColor];
+    tabbarVC.tabBar.barTintColor=[UIColor colorWithRed:0.937 green:0.865 blue:1.000 alpha:1.000];;
 
     //隐藏
     //   tabbarVC.tabBar.hidden=YES;

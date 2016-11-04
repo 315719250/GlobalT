@@ -133,8 +133,14 @@
         self.i = 1;
         [self loadData];
     }else{
-        self.i = 0;
+        
+        [self.dataArray removeAllObjects];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableview reloadData];
+        });
+        self.i=1;
         [self loadData];
+        
     }
     
     
@@ -224,7 +230,10 @@
     return (kScreenHeight-64)/2;
     
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.00000001;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.dataArray.count;
