@@ -12,15 +12,23 @@
 #import "RelexMomentCell.h"
 #import "RelexMomentModel.h"
 #import "MJRefresh.h"
+#import "VedioVC.h"
+#import "TYVideoPlayer.h"
+#import "TYVideoPlayerView.h"
+
 #define kScreendWidth [UIScreen mainScreen].bounds.size.width
 #define kScreendHeight [UIScreen mainScreen].bounds.size.height
-@interface RelexMoment ()<UITableViewDataSource,UITableViewDelegate>
+@interface RelexMoment ()<UITableViewDataSource,UITableViewDelegate,TYVideoPlayerDelegate>
 
 @property (nonatomic ,strong) NSMutableArray *dataArray;
 
 @property (nonatomic, strong) UITableView *tableview;
 
 @property (nonatomic, assign) NSInteger i;
+
+@property (nonatomic, strong) TYVideoPlayer *videoPlayer;
+@property (nonatomic, weak) TYVideoPlayerView *playerView;
+@property(nonatomic,strong)UIView *vedioView;
 
 @end
 
@@ -130,7 +138,7 @@
 
 -(void)createtableview
 {
-    self.tableview = [[UITableView alloc]initWithFrame:CGRectMake(0,0, kScreendWidth, kScreendHeight) style:UITableViewStyleGrouped];
+    self.tableview = [[UITableView alloc]initWithFrame:CGRectMake(0,64, kScreendWidth, kScreendHeight-64) style:UITableViewStyleGrouped];
     self.tableview.separatorStyle = NO;
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
@@ -226,7 +234,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    
     self.navigationItem.title = @"轻松一刻";
     
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0.435 green:0.322 blue:0.658 alpha:1.000];
@@ -240,6 +249,14 @@
     [self setupRefresh];
     
     [self.tableview registerClass:[RelexMomentCell class] forCellReuseIdentifier:@"cell"];
+    
+    //创建视频
+    [self.view sendSubviewToBack:self.vedioView];
+    [self addPlayerView];
+    [self addVideoPlayer];
+    
+
+
 }
 
 
@@ -278,17 +295,124 @@
     [btn setBackgroundImage:normallImage forState:UIControlStateNormal];
     [btn setBackgroundImage:seletImage forState:UIControlStateHighlighted];
     btn.frame = CGRectMake((w-80)/2, h/2, 80,80);
+    
     btn.tag = indexPath.row;
+    
     [btn addTarget:self action:@selector(btnclicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell addSubview:btn];
+    
+    cell.selectionStyle = NO;
+    
     return cell;
 }
+
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    VedioVC  *vc = [[VedioVC alloc]init];
+//    vc.model = self.dataArray[indexPath.row];
+//    [self.navigationController pushViewController:vc animated:YES];
+//}
+
+
+#pragma mark 播放视频
 -(void)btnclicked:(UIButton *)btn
 {
 //    btn.selected = !btn.selected;
     NSLog(@"点击了播放按钮");
+    [self.view bringSubviewToFront:self.vedioView];
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self loadVideo:btn.tag];
+    });
+
+    
 }
 
+//懒加载
+-(UIView *)vedioView
+{
+    if (_vedioView == nil) {
+        _vedioView = [[UIView alloc]init];
+        _vedioView.frame = self.view.bounds;
+        _vedioView.backgroundColor = [UIColor clearColor];
+        
+        //背景毛玻璃效果
+        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:effect];
+        effectView.frame =self.view.bounds;
+        effectView.alpha = 0.75;
+        [_vedioView addSubview:effectView];
+        
+        //关闭按钮
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        button.frame = CGRectMake( 0, 64, 30, 30);
+        [button setTitle:@"关闭" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(closeVideo) forControlEvents:UIControlEventTouchUpInside];
+        [_vedioView addSubview:button];
+        
+        
+        
+
+
+        [self.view addSubview:_vedioView];
+    }
+    return _vedioView;
+}
+//视频关闭按钮事件
+-(void)closeVideo
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.videoPlayer stop];
+    });
+    [self.view sendSubviewToBack:self.vedioView];
+    
+}
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    
+    _playerView.frame  = CGRectMake(0, (kScreendHeight-103-CGRectGetWidth(self.view.frame)*9/16)/2, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame)*9/16);
+}
+
+- (void)addPlayerView
+{
+    TYVideoPlayerView *playerView = [[TYVideoPlayerView alloc]init];
+    playerView.backgroundColor = [UIColor blackColor];
+    [self.vedioView addSubview:playerView];
+    _playerView = playerView;
+}
+
+- (void)addVideoPlayer
+{
+    TYVideoPlayer *videoPlayer = [[TYVideoPlayer alloc]init];
+    videoPlayer.delegate = self;
+    _videoPlayer = videoPlayer;
+}
+
+- (void)loadVideo:(NSInteger)index
+{
+    RelexMomentModel *model = self.dataArray[index];
+    NSString *urlString =[self VideoJX:model.VideoUrl];
+    NSURL *streamURL = [NSURL URLWithString:urlString];
+    [_videoPlayer loadVideoWithStreamURL:streamURL playerLayerView:_playerView];
+    _videoPlayer.track.continueLastWatchTime = YES;
+
+}
+
+#pragma mark - TYVideoPlayerDelegate
+
+- (void)videoPlayer:(TYVideoPlayer*)videoPlayer track:(id<TYVideoPlayerTrack>)track didChangeToState:(TYVideoPlayerState)toState fromState:(TYVideoPlayerState)fromState
+{
+    switch (toState) {
+        case TYVideoPlayerStateContentReadyToPlay:
+            //[videoPlayer seekToLastWatchTime];
+            [videoPlayer play];
+            break;
+            
+        default:
+            break;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -34,6 +34,9 @@
 		3F02F88C1DCD79D40036F742 /* sp1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F88A1DCD79D40036F742 /* sp1.png */; settings = {ASSET_TAGS = (); }; };
 		3F02F88F1DCD8DF50036F742 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F88D1DCD8DF50036F742 /* stop.png */; settings = {ASSET_TAGS = (); }; };
 		3F02F8901DCD8DF50036F742 /* action.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F88E1DCD8DF50036F742 /* action.png */; settings = {ASSET_TAGS = (); }; };
+		3F02F8841DCD71B30036F742 /* sp1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8831DCD71B30036F742 /* sp1.png */; };
+		3F02F8871DCD71CB0036F742 /* zy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8851DCD71CB0036F742 /* zy.png */; };
+		3F02F8881DCD71CB0036F742 /* zy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8861DCD71CB0036F742 /* zy1.png */; };
 		3F13FD5D1DC9BA8100B429C4 /* FacilitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD5C1DC9BA8100B429C4 /* FacilitiesModel.m */; };
 		3F13FD601DC9BAA700B429C4 /* FacilitiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD5F1DC9BAA700B429C4 /* FacilitiesVC.m */; };
 		3F13FD631DC9BACB00B429C4 /* FacilitiesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD621DC9BACB00B429C4 /* FacilitiesCell.m */; };
@@ -55,6 +58,12 @@
 		3F34560C1DCC5D29007ACFD4 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3456071DCC5D29007ACFD4 /* TFHpple.m */; settings = {ASSET_TAGS = (); }; };
 		3F34560D1DCC5D29007ACFD4 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3456091DCC5D29007ACFD4 /* TFHppleElement.m */; settings = {ASSET_TAGS = (); }; };
 		3F34560E1DCC5D29007ACFD4 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F34560B1DCC5D29007ACFD4 /* XPathQuery.m */; settings = {ASSET_TAGS = (); }; };
+		3F3455FE1DCC5C35007ACFD4 /* MovieVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3455FD1DCC5C35007ACFD4 /* MovieVC.m */; };
+		3F3456011DCC5C4D007ACFD4 /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3456001DCC5C4D007ACFD4 /* MovieModel.m */; };
+		3F3456041DCC5C89007ACFD4 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3456031DCC5C89007ACFD4 /* MovieCell.m */; };
+		3F34560C1DCC5D29007ACFD4 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3456071DCC5D29007ACFD4 /* TFHpple.m */; };
+		3F34560D1DCC5D29007ACFD4 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3456091DCC5D29007ACFD4 /* TFHppleElement.m */; };
+		3F34560E1DCC5D29007ACFD4 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F34560B1DCC5D29007ACFD4 /* XPathQuery.m */; };
 		3F518F411DC224F400BA5D84 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F518F3E1DC224F400BA5D84 /* 1.png */; };
 		3F518F421DC224F400BA5D84 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F518F3F1DC224F400BA5D84 /* 2.png */; };
 		3F518F431DC224F400BA5D84 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F518F401DC224F400BA5D84 /* 3.png */; };
@@ -73,15 +82,21 @@
 		3FEFE7201DCC87FD00BBEBE8 /* RelexMomentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFE71F1DCC87FD00BBEBE8 /* RelexMomentCell.m */; settings = {ASSET_TAGS = (); }; };
 		3FEFE7231DCC881000BBEBE8 /* RelexMomentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFE7221DCC881000BBEBE8 /* RelexMomentModel.m */; settings = {ASSET_TAGS = (); }; };
 		3FEFE7291DCCAD3D00BBEBE8 /* sp.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFE7251DCCAD3D00BBEBE8 /* sp.png */; settings = {ASSET_TAGS = (); }; };
+		3FEFE7181DCC790000BBEBE8 /* bf.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFE7171DCC790000BBEBE8 /* bf.png */; };
+		3FEFE71A1DCC79B600BBEBE8 /* bfing.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFE7191DCC79B600BBEBE8 /* bfing.png */; };
+		3FEFE71C1DCC7C1C00BBEBE8 /* bf2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFE71B1DCC7C1C00BBEBE8 /* bf2.png */; };
+		3FEFE7201DCC87FD00BBEBE8 /* RelexMomentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFE71F1DCC87FD00BBEBE8 /* RelexMomentCell.m */; };
+		3FEFE7231DCC881000BBEBE8 /* RelexMomentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFE7221DCC881000BBEBE8 /* RelexMomentModel.m */; };
+		3FEFE7291DCCAD3D00BBEBE8 /* sp.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFE7251DCCAD3D00BBEBE8 /* sp.png */; };
 		3FF349A71DC8C34000C7A9CD /* TipsWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF349A61DC8C34000C7A9CD /* TipsWebVC.m */; };
 		3FF349AB1DC8C67300C7A9CD /* TravelingHealthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF349AA1DC8C67300C7A9CD /* TravelingHealthModel.m */; };
 		3FF349AE1DC8C69600C7A9CD /* TravelHealthVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF349AD1DC8C69600C7A9CD /* TravelHealthVC.m */; };
 		3FF349B11DC8C6CF00C7A9CD /* TravelHealthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF349B01DC8C6CF00C7A9CD /* TravelHealthCell.m */; };
 		3FF349B41DC8C6FB00C7A9CD /* HealthWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF349B31DC8C6FB00C7A9CD /* HealthWebVC.m */; };
 		3FF349B71DC8D36300C7A9CD /* AppTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF349B61DC8D36300C7A9CD /* AppTool.m */; };
-		3FFF47891DCC5EAF0013801F /* back_about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF47881DCC5EAF0013801F /* back_about.jpg */; settings = {ASSET_TAGS = (); }; };
-		3FFF478B1DCC5EB40013801F /* backAdvice.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF478A1DCC5EB40013801F /* backAdvice.jpg */; settings = {ASSET_TAGS = (); }; };
-		3FFF478D1DCC5F2B0013801F /* back_help.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF478C1DCC5F2B0013801F /* back_help.jpg */; settings = {ASSET_TAGS = (); }; };
+		3FFF47891DCC5EAF0013801F /* back_about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF47881DCC5EAF0013801F /* back_about.jpg */; };
+		3FFF478B1DCC5EB40013801F /* backAdvice.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF478A1DCC5EB40013801F /* backAdvice.jpg */; };
+		3FFF478D1DCC5F2B0013801F /* back_help.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFF478C1DCC5F2B0013801F /* back_help.jpg */; };
 		9D1350C31DC05B1100B26D62 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D1350C21DC05B1100B26D62 /* background.jpg */; };
 		9D1350C51DC05BEA00B26D62 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1350C41DC05BEA00B26D62 /* menu.png */; };
 		9D1350D51DC0837200B26D62 /* AccelerationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1350C81DC0837200B26D62 /* AccelerationAnimation.m */; };
@@ -132,6 +147,17 @@
 		9D6F1ADE1DC9765D00E9B6B0 /* TravelingTips_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D6F1ACE1DC9765D00E9B6B0 /* TravelingTips_4.jpg */; };
 		9D6F1AE01DC9808A00E9B6B0 /* TravelHelth_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D6F1ADF1DC9808A00E9B6B0 /* TravelHelth_4.jpg */; };
 		9D6F1C9C1DCC41F200E9B6B0 /* RelexMoment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1C9B1DCC41F200E9B6B0 /* RelexMoment.m */; };
+		9D6F1CBF1DCD79BD00E9B6B0 /* VedioVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1CBE1DCD79BD00E9B6B0 /* VedioVC.m */; };
+		9D6F1CD51DCD7AE600E9B6B0 /* TYLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1CC21DCD7AE600E9B6B0 /* TYLoadingView.m */; };
+		9D6F1CD61DCD7AE600E9B6B0 /* TYVideoBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1CC51DCD7AE600E9B6B0 /* TYVideoBottomView.m */; };
+		9D6F1CD71DCD7AE600E9B6B0 /* TYVideoControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1CC71DCD7AE600E9B6B0 /* TYVideoControlView.m */; };
+		9D6F1CD81DCD7AE600E9B6B0 /* TYVideoErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1CC91DCD7AE600E9B6B0 /* TYVideoErrorView.m */; };
+		9D6F1CD91DCD7AE600E9B6B0 /* TYVideoPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D6F1CCA1DCD7AE600E9B6B0 /* TYVideoPlayer.bundle */; };
+		9D6F1CDA1DCD7AE600E9B6B0 /* TYVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1CCC1DCD7AE600E9B6B0 /* TYVideoPlayer.m */; };
+		9D6F1CDB1DCD7AE600E9B6B0 /* TYVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1CCE1DCD7AE600E9B6B0 /* TYVideoPlayerController.m */; };
+		9D6F1CDC1DCD7AE600E9B6B0 /* TYVideoPlayerTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1CD01DCD7AE600E9B6B0 /* TYVideoPlayerTrack.m */; };
+		9D6F1CDD1DCD7AE600E9B6B0 /* TYVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1CD21DCD7AE600E9B6B0 /* TYVideoPlayerView.m */; };
+		9D6F1CDE1DCD7AE600E9B6B0 /* TYVideoTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F1CD41DCD7AE600E9B6B0 /* TYVideoTitleView.m */; };
 		9DE543701DBE24DF006AF0F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5436F1DBE24DF006AF0F9 /* main.m */; };
 		9DE543731DBE24DF006AF0F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE543721DBE24DF006AF0F9 /* AppDelegate.m */; };
 		9DE543761DBE24DF006AF0F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE543751DBE24DF006AF0F9 /* ViewController.m */; };
@@ -385,6 +411,28 @@
 		9D6F1ADF1DC9808A00E9B6B0 /* TravelHelth_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TravelHelth_4.jpg; sourceTree = "<group>"; };
 		9D6F1C9A1DCC41F200E9B6B0 /* RelexMoment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelexMoment.h; sourceTree = "<group>"; };
 		9D6F1C9B1DCC41F200E9B6B0 /* RelexMoment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelexMoment.m; sourceTree = "<group>"; };
+		9D6F1CBD1DCD79BD00E9B6B0 /* VedioVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VedioVC.h; sourceTree = "<group>"; };
+		9D6F1CBE1DCD79BD00E9B6B0 /* VedioVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VedioVC.m; sourceTree = "<group>"; };
+		9D6F1CC11DCD7AE600E9B6B0 /* TYLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLoadingView.h; sourceTree = "<group>"; };
+		9D6F1CC21DCD7AE600E9B6B0 /* TYLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLoadingView.m; sourceTree = "<group>"; };
+		9D6F1CC31DCD7AE600E9B6B0 /* TYPlayerLayerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPlayerLayerProtocol.h; sourceTree = "<group>"; };
+		9D6F1CC41DCD7AE600E9B6B0 /* TYVideoBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYVideoBottomView.h; sourceTree = "<group>"; };
+		9D6F1CC51DCD7AE600E9B6B0 /* TYVideoBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYVideoBottomView.m; sourceTree = "<group>"; };
+		9D6F1CC61DCD7AE600E9B6B0 /* TYVideoControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYVideoControlView.h; sourceTree = "<group>"; };
+		9D6F1CC71DCD7AE600E9B6B0 /* TYVideoControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYVideoControlView.m; sourceTree = "<group>"; };
+		9D6F1CC81DCD7AE600E9B6B0 /* TYVideoErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYVideoErrorView.h; sourceTree = "<group>"; };
+		9D6F1CC91DCD7AE600E9B6B0 /* TYVideoErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYVideoErrorView.m; sourceTree = "<group>"; };
+		9D6F1CCA1DCD7AE600E9B6B0 /* TYVideoPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TYVideoPlayer.bundle; sourceTree = "<group>"; };
+		9D6F1CCB1DCD7AE600E9B6B0 /* TYVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYVideoPlayer.h; sourceTree = "<group>"; };
+		9D6F1CCC1DCD7AE600E9B6B0 /* TYVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYVideoPlayer.m; sourceTree = "<group>"; };
+		9D6F1CCD1DCD7AE600E9B6B0 /* TYVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYVideoPlayerController.h; sourceTree = "<group>"; };
+		9D6F1CCE1DCD7AE600E9B6B0 /* TYVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYVideoPlayerController.m; sourceTree = "<group>"; };
+		9D6F1CCF1DCD7AE600E9B6B0 /* TYVideoPlayerTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYVideoPlayerTrack.h; sourceTree = "<group>"; };
+		9D6F1CD01DCD7AE600E9B6B0 /* TYVideoPlayerTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYVideoPlayerTrack.m; sourceTree = "<group>"; };
+		9D6F1CD11DCD7AE600E9B6B0 /* TYVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYVideoPlayerView.h; sourceTree = "<group>"; };
+		9D6F1CD21DCD7AE600E9B6B0 /* TYVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYVideoPlayerView.m; sourceTree = "<group>"; };
+		9D6F1CD31DCD7AE600E9B6B0 /* TYVideoTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYVideoTitleView.h; sourceTree = "<group>"; };
+		9D6F1CD41DCD7AE600E9B6B0 /* TYVideoTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYVideoTitleView.m; sourceTree = "<group>"; };
 		9DE5436B1DBE24DF006AF0F9 /* GlobalTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlobalTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE5436F1DBE24DF006AF0F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DE543711DBE24DF006AF0F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -675,6 +723,7 @@
 		3FEFE71D1DCC87D900BBEBE8 /* RelexMoment */ = {
 			isa = PBXGroup;
 			children = (
+				9D6F1CBC1DCD798100E9B6B0 /* VedioVC */,
 				9D6F1C9A1DCC41F200E9B6B0 /* RelexMoment.h */,
 				9D6F1C9B1DCC41F200E9B6B0 /* RelexMoment.m */,
 				3FEFE71E1DCC87FD00BBEBE8 /* RelexMomentCell.h */,
@@ -902,6 +951,42 @@
 			name = Setting;
 			sourceTree = "<group>";
 		};
+		9D6F1CBC1DCD798100E9B6B0 /* VedioVC */ = {
+			isa = PBXGroup;
+			children = (
+				9D6F1CBD1DCD79BD00E9B6B0 /* VedioVC.h */,
+				9D6F1CBE1DCD79BD00E9B6B0 /* VedioVC.m */,
+			);
+			name = VedioVC;
+			sourceTree = "<group>";
+		};
+		9D6F1CC01DCD7AE600E9B6B0 /* TYVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				9D6F1CC11DCD7AE600E9B6B0 /* TYLoadingView.h */,
+				9D6F1CC21DCD7AE600E9B6B0 /* TYLoadingView.m */,
+				9D6F1CC31DCD7AE600E9B6B0 /* TYPlayerLayerProtocol.h */,
+				9D6F1CC41DCD7AE600E9B6B0 /* TYVideoBottomView.h */,
+				9D6F1CC51DCD7AE600E9B6B0 /* TYVideoBottomView.m */,
+				9D6F1CC61DCD7AE600E9B6B0 /* TYVideoControlView.h */,
+				9D6F1CC71DCD7AE600E9B6B0 /* TYVideoControlView.m */,
+				9D6F1CC81DCD7AE600E9B6B0 /* TYVideoErrorView.h */,
+				9D6F1CC91DCD7AE600E9B6B0 /* TYVideoErrorView.m */,
+				9D6F1CCA1DCD7AE600E9B6B0 /* TYVideoPlayer.bundle */,
+				9D6F1CCB1DCD7AE600E9B6B0 /* TYVideoPlayer.h */,
+				9D6F1CCC1DCD7AE600E9B6B0 /* TYVideoPlayer.m */,
+				9D6F1CCD1DCD7AE600E9B6B0 /* TYVideoPlayerController.h */,
+				9D6F1CCE1DCD7AE600E9B6B0 /* TYVideoPlayerController.m */,
+				9D6F1CCF1DCD7AE600E9B6B0 /* TYVideoPlayerTrack.h */,
+				9D6F1CD01DCD7AE600E9B6B0 /* TYVideoPlayerTrack.m */,
+				9D6F1CD11DCD7AE600E9B6B0 /* TYVideoPlayerView.h */,
+				9D6F1CD21DCD7AE600E9B6B0 /* TYVideoPlayerView.m */,
+				9D6F1CD31DCD7AE600E9B6B0 /* TYVideoTitleView.h */,
+				9D6F1CD41DCD7AE600E9B6B0 /* TYVideoTitleView.m */,
+			);
+			path = TYVideoPlayer;
+			sourceTree = "<group>";
+		};
 		9DE543621DBE24DF006AF0F9 = {
 			isa = PBXGroup;
 			children = (
@@ -1064,6 +1149,7 @@
 		9DF275831DC0D13000682670 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				9D6F1CC01DCD7AE600E9B6B0 /* TYVideoPlayer */,
 				3F3456051DCC5D29007ACFD4 /* Classes */,
 				9D6F1AAE1DC8ABC800E9B6B0 /* XML */,
 				9D6F19D41DC749C900E9B6B0 /* ZZGallerySliderView */,
@@ -1379,6 +1465,9 @@
 				9D1350C51DC05BEA00B26D62 /* menu.png in Resources */,
 				9D1350C31DC05B1100B26D62 /* background.jpg in Resources */,
 				9D6F1AD21DC9765D00E9B6B0 /* Hike_4.jpg in Resources */,
+				9D6F1CD91DCD7AE600E9B6B0 /* TYVideoPlayer.bundle in Resources */,
+				3F02F8841DCD71B30036F742 /* sp1.png in Resources */,
+				3F02F8881DCD71CB0036F742 /* zy1.png in Resources */,
 				9D6F1AD11DC9765D00E9B6B0 /* Hike_3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1416,6 +1505,7 @@
 				9DF275FE1DC1DD8A00682670 /* UIImage+XHGIF.m in Sources */,
 				9D6F19671DC4743400E9B6B0 /* FMDatabasePool.m in Sources */,
 				3F0240FC1DC6E8BE006305E0 /* MJRefreshHeaderView.m in Sources */,
+				9D6F1CD81DCD7AE600E9B6B0 /* TYVideoErrorView.m in Sources */,
 				9D6F19811DC4F57900E9B6B0 /* FMDBTool.m in Sources */,
 				3F0240FD1DC6E8BE006305E0 /* UIScrollView+MJExtension.m in Sources */,
 				3F13FD731DC9C69200B429C4 /* HikingWebVC.m in Sources */,
@@ -1437,6 +1527,7 @@
 				9DF276001DC1DD8A00682670 /* XHImageCache.m in Sources */,
 				9DE543B71DBE2934006AF0F9 /* UIView+SDExtension.m in Sources */,
 				9DE543E61DBE2BE1006AF0F9 /* SDWebImageCompat.m in Sources */,
+				9D6F1CDA1DCD7AE600E9B6B0 /* TYVideoPlayer.m in Sources */,
 				9D6F19DA1DC749C900E9B6B0 /* ZZGallerySliderCell.m in Sources */,
 				9DE543EB1DBE2BE1006AF0F9 /* SDWebImagePrefetcher.m in Sources */,
 				9D6F19681DC4743400E9B6B0 /* FMDatabaseQueue.m in Sources */,
@@ -1454,6 +1545,7 @@
 				9D6F1AAA1DC8AB5200E9B6B0 /* TravelingTipsModel.m in Sources */,
 				3F154D511DCACAB200BAC0D1 /* FacilitiesCollectingVC.m in Sources */,
 				9D1350D91DC0837200B26D62 /* RESideMenuCell.m in Sources */,
+				9D6F1CD71DCD7AE600E9B6B0 /* TYVideoControlView.m in Sources */,
 				9D6F1AAD1DC8AB6800E9B6B0 /* TravelingTipsVC.m in Sources */,
 				3F0240D91DC6D2AB006305E0 /* UITableView+PullRefresh.m in Sources */,
 				3F0240FB1DC6E8BE006305E0 /* MJRefreshFooterView.m in Sources */,
@@ -1468,29 +1560,36 @@
 				3F0240FF1DC6E8BE006305E0 /* UIView+MJExtension.m in Sources */,
 				9D6F19651DC4743400E9B6B0 /* FMDatabase.m in Sources */,
 				9DE543B21DBE2934006AF0F9 /* TAAnimatedDotView.m in Sources */,
+				9D6F1CD61DCD7AE600E9B6B0 /* TYVideoBottomView.m in Sources */,
 				3FF349AE1DC8C69600C7A9CD /* TravelHealthVC.m in Sources */,
 				3FEFE7231DCC881000BBEBE8 /* RelexMomentModel.m in Sources */,
 				9D6F19691DC4743400E9B6B0 /* FMResultSet.m in Sources */,
 				9DE543701DBE24DF006AF0F9 /* main.m in Sources */,
 				3FA914F61DCA1FB7002B0FD8 /* TipsCollectingVC.m in Sources */,
 				3F0240D81DC6D2AB006305E0 /* RefreshControl.m in Sources */,
+				9D6F1CDC1DCD7AE600E9B6B0 /* TYVideoPlayerTrack.m in Sources */,
 				9D6F19581DC435EF00E9B6B0 /* NewPagedFlowView.m in Sources */,
 				9D6F1AB11DC8ABC800E9B6B0 /* GDataXMLNode.m in Sources */,
 				3F0240FE1DC6E8BE006305E0 /* UIScrollView+MJRefresh.m in Sources */,
 				9D1350D51DC0837200B26D62 /* AccelerationAnimation.m in Sources */,
 				3FF349A71DC8C34000C7A9CD /* TipsWebVC.m in Sources */,
+				9D6F1CDB1DCD7AE600E9B6B0 /* TYVideoPlayerController.m in Sources */,
 				3FA914F91DCA1FCF002B0FD8 /* HealthCollectingVC.m in Sources */,
 				9DE543B51DBE2934006AF0F9 /* SDCollectionViewCell.m in Sources */,
+				9D6F1CDE1DCD7AE600E9B6B0 /* TYVideoTitleView.m in Sources */,
 				3F13FD701DC9C67A00B429C4 /* HikingCell.m in Sources */,
 				3FF349B41DC8C6FB00C7A9CD /* HealthWebVC.m in Sources */,
 				3F13FD631DC9BACB00B429C4 /* FacilitiesCell.m in Sources */,
 				9D6F1C9C1DCC41F200E9B6B0 /* RelexMoment.m in Sources */,
 				3F13FD6D1DC9C66700B429C4 /* HikingVC.m in Sources */,
+				9D6F1CDD1DCD7AE600E9B6B0 /* TYVideoPlayerView.m in Sources */,
 				9DE543ED1DBE2BE1006AF0F9 /* UIImage+GIF.m in Sources */,
 				9DE543F01DBE2BE1006AF0F9 /* UIImageView+WebCache.m in Sources */,
+				9D6F1CD51DCD7AE600E9B6B0 /* TYLoadingView.m in Sources */,
 				3F9E35B51DC73A5B003B7478 /* AdviceVC.m in Sources */,
 				9DF275FF1DC1DD8A00682670 /* UIImageView+XHWebCache.m in Sources */,
 				9DE543E41DBE2BE1006AF0F9 /* NSData+ImageContentType.m in Sources */,
+				9D6F1CBF1DCD79BD00E9B6B0 /* VedioVC.m in Sources */,
 				3FF349B71DC8D36300C7A9CD /* AppTool.m in Sources */,
 				3FF349AB1DC8C67300C7A9CD /* TravelingHealthModel.m in Sources */,
 				9D6F19661DC4743400E9B6B0 /* FMDatabaseAdditions.m in Sources */,
