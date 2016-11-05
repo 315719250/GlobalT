@@ -34,12 +34,18 @@
 		3F02F8881DCD71CB0036F742 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		3F02F88B1DCD79D40036F742 /* zy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8891DCD79D40036F742 /* zy1.png */; settings = {ASSET_TAGS = (); }; };
 		3F02F88C1DCD79D40036F742 /* sp1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F88A1DCD79D40036F742 /* sp1.png */; settings = {ASSET_TAGS = (); }; };
+
 		3F02F8961DCDBED80036F742 /* sc.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8951DCDBED80036F742 /* sc.png */; settings = {ASSET_TAGS = (); }; };
 		3F02F89B1DCDCA670036F742 /* action.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8971DCDCA670036F742 /* action.png */; settings = {ASSET_TAGS = (); }; };
 		3F02F89C1DCDCA670036F742 /* qp.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8981DCDCA670036F742 /* qp.png */; settings = {ASSET_TAGS = (); }; };
 		3F02F89D1DCDCA670036F742 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8991DCDCA670036F742 /* stop.png */; settings = {ASSET_TAGS = (); }; };
 		3F02F89E1DCDCA670036F742 /* ax.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F89A1DCDCA670036F742 /* ax.png */; settings = {ASSET_TAGS = (); }; };
 		3F02F8A01DCDCAFD0036F742 /* ax1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F89F1DCDCAFD0036F742 /* ax1.png */; settings = {ASSET_TAGS = (); }; };
+
+		3F04D9A91DCDCF910036EEE2 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F04D9A71DCDCF910036EEE2 /* 02.jpg */; settings = {ASSET_TAGS = (); }; };
+		3F04D9AA1DCDCF910036EEE2 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F04D9A81DCDCF910036EEE2 /* 01.jpg */; settings = {ASSET_TAGS = (); }; };
+		3F04D9B81DCDE22E0036EEE2 /* 003.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F04D9B71DCDE22E0036EEE2 /* 003.png */; settings = {ASSET_TAGS = (); }; };
+
 		3F13FD5D1DC9BA8100B429C4 /* FacilitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD5C1DC9BA8100B429C4 /* FacilitiesModel.m */; };
 		3F13FD601DC9BAA700B429C4 /* FacilitiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD5F1DC9BAA700B429C4 /* FacilitiesVC.m */; };
 		3F13FD631DC9BACB00B429C4 /* FacilitiesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD621DC9BACB00B429C4 /* FacilitiesCell.m */; };
@@ -64,6 +70,7 @@
 		3F518F411DC224F400BA5D84 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F518F3E1DC224F400BA5D84 /* 1.png */; };
 		3F518F421DC224F400BA5D84 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F518F3F1DC224F400BA5D84 /* 2.png */; };
 		3F518F431DC224F400BA5D84 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F518F401DC224F400BA5D84 /* 3.png */; };
+		3F8CF6CC1DCD6B5000119E5A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CF6CB1DCD6B5000119E5A /* FirstViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3F9E35B51DC73A5B003B7478 /* AdviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9E35B41DC73A5B003B7478 /* AdviceVC.m */; };
 		3F9E35B81DC74975003B7478 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9E35B71DC74975003B7478 /* HelpVC.m */; };
 		3F9E35BB1DC74C1E003B7478 /* advice.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F9E35BA1DC74C1E003B7478 /* advice.jpg */; };
@@ -252,12 +259,18 @@
 		3F02F8851DCD71CB0036F742 /* zy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zy.png; sourceTree = "<group>"; };
 		3F02F8891DCD79D40036F742 /* zy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zy1.png; sourceTree = "<group>"; };
 		3F02F88A1DCD79D40036F742 /* sp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sp1.png; sourceTree = "<group>"; };
+
 		3F02F8951DCDBED80036F742 /* sc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sc.png; sourceTree = "<group>"; };
 		3F02F8971DCDCA670036F742 /* action.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = action.png; sourceTree = "<group>"; };
 		3F02F8981DCDCA670036F742 /* qp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qp.png; sourceTree = "<group>"; };
 		3F02F8991DCDCA670036F742 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		3F02F89A1DCDCA670036F742 /* ax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ax.png; sourceTree = "<group>"; };
 		3F02F89F1DCDCAFD0036F742 /* ax1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ax1.png; sourceTree = "<group>"; };
+
+		3F04D9A71DCDCF910036EEE2 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		3F04D9A81DCDCF910036EEE2 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		3F04D9B71DCDE22E0036EEE2 /* 003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 003.png; sourceTree = "<group>"; };
+
 		3F13FD5B1DC9BA8100B429C4 /* FacilitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacilitiesModel.h; sourceTree = "<group>"; };
 		3F13FD5C1DC9BA8100B429C4 /* FacilitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacilitiesModel.m; sourceTree = "<group>"; };
 		3F13FD5E1DC9BAA700B429C4 /* FacilitiesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacilitiesVC.h; sourceTree = "<group>"; };
@@ -295,6 +308,8 @@
 		3F518F3E1DC224F400BA5D84 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		3F518F3F1DC224F400BA5D84 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		3F518F401DC224F400BA5D84 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		3F8CF6CA1DCD6B5000119E5A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		3F8CF6CB1DCD6B5000119E5A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		3F9E35B31DC73A5B003B7478 /* AdviceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviceVC.h; sourceTree = "<group>"; };
 		3F9E35B41DC73A5B003B7478 /* AdviceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdviceVC.m; sourceTree = "<group>"; };
 		3F9E35B61DC74975003B7478 /* HelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpVC.h; sourceTree = "<group>"; };
@@ -589,6 +604,16 @@
 				3F0241171DC733BB006305E0 /* background_5.JPG */,
 			);
 			path = background;
+			sourceTree = "<group>";
+		};
+		3F04D9A61DCDCF140036EEE2 /* FirstShow */ = {
+			isa = PBXGroup;
+			children = (
+				3F04D9B71DCDE22E0036EEE2 /* 003.png */,
+				3F04D9A71DCDCF910036EEE2 /* 02.jpg */,
+				3F04D9A81DCDCF910036EEE2 /* 01.jpg */,
+			);
+			name = FirstShow;
 			sourceTree = "<group>";
 		};
 		3F13FD5A1DC9BA3900B429C4 /* Travelfacilities */ = {
@@ -1022,6 +1047,7 @@
 		9DE5436E1DBE24DF006AF0F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F04D9A61DCDCF140036EEE2 /* FirstShow */,
 				9D6F1ABA1DC9765D00E9B6B0 /* Travel strategy_01 */,
 				3F0241121DC733BB006305E0 /* background */,
 				3F9E35BC1DC7655A003B7478 /* BGCollecting */,
@@ -1173,6 +1199,8 @@
 				9DE543721DBE24DF006AF0F9 /* AppDelegate.m */,
 				9DE543741DBE24DF006AF0F9 /* ViewController.h */,
 				9DE543751DBE24DF006AF0F9 /* ViewController.m */,
+				3F8CF6CA1DCD6B5000119E5A /* FirstViewController.h */,
+				3F8CF6CB1DCD6B5000119E5A /* FirstViewController.m */,
 				9DE543771DBE24DF006AF0F9 /* Main.storyboard */,
 			);
 			name = Main;
@@ -1394,6 +1422,7 @@
 				3F0240DB1DC6D70B006305E0 /* logo.jpg in Resources */,
 				9D6F19771DC4E6AF00E9B6B0 /* favorite_2.jpg in Resources */,
 				9DF276291DC1FE1000682670 /* domestic_3.jpg in Resources */,
+				3F04D9B81DCDE22E0036EEE2 /* 003.png in Resources */,
 				3FEFE7181DCC790000BBEBE8 /* bf.png in Resources */,
 				9D6F197A1DC4E6AF00E9B6B0 /* favorite_5.jpg in Resources */,
 				3F02F8961DCDBED80036F742 /* sc.png in Resources */,
@@ -1405,6 +1434,7 @@
 				3F299F501DC72B6200FC6BD9 /* Overseas_4.jpg in Resources */,
 				9D6F1AD81DC9765D00E9B6B0 /* TravelHelth_2.jpg in Resources */,
 				3F0241181DC733BB006305E0 /* background_1.JPG in Resources */,
+				3F04D9A91DCDCF910036EEE2 /* 02.jpg in Resources */,
 				3F9E35C41DC7655A003B7478 /* island.jpg in Resources */,
 				3F299F501DC72B6200FC6BD9 /* Overseas_4.jpg in Resources */,
 				3F9E35C31DC7655A003B7478 /* Hot.jpg in Resources */,
@@ -1448,6 +1478,7 @@
 				9D6F1AD91DC9765D00E9B6B0 /* TravelHelth_3.jpg in Resources */,
 				9DE543791DBE24DF006AF0F9 /* Main.storyboard in Resources */,
 				3F299F481DC72B1800FC6BD9 /* domestic_4.jpg in Resources */,
+				3F04D9AA1DCDCF910036EEE2 /* 01.jpg in Resources */,
 				3F9E35BB1DC74C1E003B7478 /* advice.jpg in Resources */,
 				9D6F1AD61DC9765D00E9B6B0 /* TravelEquipment_4.jpg in Resources */,
 				9DF276281DC1FE1000682670 /* domestic_2.jpg in Resources */,
@@ -1590,6 +1621,7 @@
 				9DE543F01DBE2BE1006AF0F9 /* UIImageView+WebCache.m in Sources */,
 				9D6F1CD51DCD7AE600E9B6B0 /* TYLoadingView.m in Sources */,
 				3F9E35B51DC73A5B003B7478 /* AdviceVC.m in Sources */,
+				3F8CF6CC1DCD6B5000119E5A /* FirstViewController.m in Sources */,
 				9DF275FF1DC1DD8A00682670 /* UIImageView+XHWebCache.m in Sources */,
 				9DE543E41DBE2BE1006AF0F9 /* NSData+ImageContentType.m in Sources */,
 				9D6F1CBF1DCD79BD00E9B6B0 /* VedioVC.m in Sources */,
@@ -1746,7 +1778,7 @@
 				INFOPLIST_FILE = GlobalTravel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lanou.GlobalTravel;
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.GlobalTravels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1767,7 +1799,7 @@
 				INFOPLIST_FILE = GlobalTravel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lanou.GlobalTravel;
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.GlobalTravels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

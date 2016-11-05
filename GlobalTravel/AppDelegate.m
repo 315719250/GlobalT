@@ -10,6 +10,7 @@
 #import "XHLaunchAd.h"
 #import "ViewController.h"
 #import "RelexMoment.h"
+#import "FirstViewController.h"
 
 
 //动态广告
@@ -80,10 +81,23 @@
         
         
     } showFinish:^{
-        //广告展示完成回调,设置window根控制器
-//        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
         
-        self.window.rootViewController=[self createTabbarController];
+        
+        if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+            NSLog(@"首次启动");
+            FirstViewController *vc = [[FirstViewController alloc] init];
+            self.window.rootViewController = vc;
+        }else {
+            NSLog(@"非首次启动");
+            self.window.rootViewController=[self createTabbarController];
+        }
+        
+        
+        
+
+        
+
 
     }];
 }
