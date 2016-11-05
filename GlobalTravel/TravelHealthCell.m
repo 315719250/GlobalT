@@ -48,7 +48,7 @@
     CGFloat h = self.frame.size.height;
     self.imgView.frame = CGRectMake(5, 5, w/3, h-5);
     
-    self.titleText.frame =CGRectMake(w/2.8, 0, w*2/3, h/2);
+    self.titleText.frame =CGRectMake(w/2.8, 0, w/1.6, h/2);
     self.dateLabel.frame = CGRectMake(w/2.8, h/2, w/2, h/2);
 }
 

@@ -41,8 +41,8 @@
     CGFloat h = self.frame.size.height;
     self.headerImage.frame = CGRectMake(5, 5, w/2.5, h-25);
     self.dateLabel.frame = CGRectMake(5, h-25, w/2.4, 25);
-    self.titleLabel.frame = CGRectMake(w/2.4, 5, w/2, h/4);
-    self.contextLabel.frame = CGRectMake(w/2.4, h/4, w/2, h/2);
+    self.titleLabel.frame = CGRectMake(w/2.4, 5, w/1.8, h/4);
+    self.contextLabel.frame = CGRectMake(w/2.4, h/4, w/1.8, h/2);
     self.fromLabel.frame = CGRectMake(w/1.4, h-25, w/2, 30);
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
