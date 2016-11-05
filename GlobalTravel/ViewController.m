@@ -55,7 +55,7 @@
     demoContainerView.contentSize = CGSizeMake(self.view.frame.size.width, 4*h+230);
     [self.view addSubview:demoContainerView];
     
-    self.title = @"Global Travel";
+    self.navigationItem.title = @"Global Travel";
 
     
 }

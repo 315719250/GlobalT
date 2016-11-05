@@ -83,11 +83,28 @@
             });
             
         }
+        else
+        {
+            [self.tableview headerEndRefreshing];
+            [self createAlert];
+            NSLog(@"网络请求失败");
+        }
+        
     }];
     
     
 }
-
+-(void)createAlert
+{
+    UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"您的网络不通，请稍后再试" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self.tableview reloadData];
+        NSLog(@"已经点确定");
+    }];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 -(void)createtableview
 {
     self.tableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight-64) style:UITableViewStyleGrouped];

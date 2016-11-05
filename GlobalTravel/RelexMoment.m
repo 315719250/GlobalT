@@ -71,10 +71,12 @@
         }
         else
         {
+            [self.tableview headerEndRefreshing];
+            [self createAlert];
             NSLog(@"error=%@",error);
             NSLog(@"网络请求失败");
-            
         }
+        
     }];
     
     //4.开启任务
@@ -82,6 +84,18 @@
     
     
 }
+-(void)createAlert
+{
+    UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"您的网络不通，请稍后再试" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self.tableview reloadData];
+        NSLog(@"已经点确定");
+    }];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 
 //解析HTML数据获取到对应的MP4格式的视频url
 -(NSString *)VideoJX:(NSString *)url;
@@ -213,7 +227,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"轻松一刻";
+    self.navigationItem.title = @"轻松一刻";
     
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0.435 green:0.322 blue:0.658 alpha:1.000];
     
@@ -274,6 +288,8 @@
 //    btn.selected = !btn.selected;
     NSLog(@"点击了播放按钮");
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -61,7 +61,7 @@
                 UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, self.window.bounds.size.height-150, self.window.bounds.size.width, 150)];
                 
                 label.textAlignment = 1;
-                label.text  = @"Global Travel";
+//                label.text  = @"Global Travel";
                 
                 label.font = [UIFont systemFontOfSize:50];
                 
