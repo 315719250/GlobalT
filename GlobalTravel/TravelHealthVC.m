@@ -151,11 +151,7 @@
         [self loadData];
     }else{
         
-        [self.dataArray removeAllObjects];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableview reloadData];
-        });
-        self.i=1;
+        self.i = 0;
         [self loadData];
         
     }
@@ -185,13 +181,13 @@
     }
     
     // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 刷新表格
-            [self.tableview reloadData];
-    
-            // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-            [self.tableview footerEndRefreshing];
-        });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 刷新表格
+        [self.tableview reloadData];
+        
+        // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+        [self.tableview footerEndRefreshing];
+    });
 }
 
 -(NSMutableArray *)dataArray{
@@ -221,8 +217,7 @@
     
     
     [self createtableview];
-    //数据解析
-//    [self loadData];
+
     
     
     // 2.集成刷新控件
