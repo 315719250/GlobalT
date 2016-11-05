@@ -317,7 +317,8 @@
 #pragma mark 播放视频
 -(void)btnclicked:(UIButton *)btn
 {
-//    btn.selected = !btn.selected;
+
+    self.tabBarController.tabBar.hidden = NO;
     NSLog(@"点击了播放按钮");
     [self.view bringSubviewToFront:self.vedioView];
 
@@ -345,7 +346,7 @@
         
         //关闭按钮
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-        button.frame = CGRectMake( 0, 64, 30, 30);
+        button.frame = CGRectMake( 5, 69, 35, 35);
         [button setBackgroundImage:[UIImage imageNamed:@"sc.png"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(closeVideo) forControlEvents:UIControlEventTouchUpInside];
         [_vedioView addSubview:button];
@@ -353,13 +354,13 @@
         
         
         //设置收藏按钮
-        UIImage *norImage =  [UIImage imageNamed:@"4.png"];
+        UIImage *norImage =  [UIImage imageNamed:@"ax.png"];
         norImage = [norImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        UIImage *selImage =  [UIImage imageNamed:@"5.png"];
+        UIImage *selImage =  [UIImage imageNamed:@"ax1.png"];
         selImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
         UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame=CGRectMake(kScreendWidth-40 ,64, 40, 40);
+        btn.frame=CGRectMake(kScreendWidth-40 ,69, 35, 35);
         [btn setImage:norImage forState:UIControlStateNormal];
         [btn setImage:selImage forState:UIControlStateSelected];
         //设置按钮选中状态
@@ -374,7 +375,7 @@
         selImage1 = [selImage1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
         UIButton *btn1=[UIButton buttonWithType:UIButtonTypeCustom];
-        btn1.frame=CGRectMake(0 ,kScreendHeight/1.7, 35, 35);
+        btn1.frame=CGRectMake(5 ,kScreendHeight/1.7, 35, 35);
         [btn1 setImage:norImage1 forState:UIControlStateNormal];
         [btn1 setImage:selImage1 forState:UIControlStateSelected];
         //设置按钮选中状态
@@ -385,7 +386,7 @@
         
         //设置全屏按钮
         UIButton *qpbtn = [UIButton buttonWithType:UIButtonTypeSystem];
-        qpbtn.frame = CGRectMake( kScreendWidth-40, kScreendHeight/1.7, 30, 30);
+        qpbtn.frame = CGRectMake( kScreendWidth-40, kScreendHeight/1.7, 35, 35);
         [qpbtn setBackgroundImage:[UIImage imageNamed:@"qp.png"] forState:UIControlStateNormal];
         [qpbtn addTarget:self action:@selector(qpVideo) forControlEvents:UIControlEventTouchUpInside];
         [_vedioView addSubview:qpbtn];
@@ -469,7 +470,15 @@
             break;
     }
 }
-
+//继承于scrollView的方法
+-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    if (velocity.y > 0) {
+        self.tabBarController.tabBar.hidden = YES;
+    }else{
+        self.tabBarController.tabBar.hidden = NO;
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

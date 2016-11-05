@@ -34,10 +34,12 @@
 		3F02F8881DCD71CB0036F742 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		3F02F88B1DCD79D40036F742 /* zy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8891DCD79D40036F742 /* zy1.png */; settings = {ASSET_TAGS = (); }; };
 		3F02F88C1DCD79D40036F742 /* sp1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F88A1DCD79D40036F742 /* sp1.png */; settings = {ASSET_TAGS = (); }; };
-		3F02F88F1DCD8DF50036F742 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F88D1DCD8DF50036F742 /* stop.png */; settings = {ASSET_TAGS = (); }; };
-		3F02F8901DCD8DF50036F742 /* action.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F88E1DCD8DF50036F742 /* action.png */; settings = {ASSET_TAGS = (); }; };
-		3F02F8941DCDB9830036F742 /* qp.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8921DCDB9830036F742 /* qp.png */; settings = {ASSET_TAGS = (); }; };
 		3F02F8961DCDBED80036F742 /* sc.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8951DCDBED80036F742 /* sc.png */; settings = {ASSET_TAGS = (); }; };
+		3F02F89B1DCDCA670036F742 /* action.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8971DCDCA670036F742 /* action.png */; settings = {ASSET_TAGS = (); }; };
+		3F02F89C1DCDCA670036F742 /* qp.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8981DCDCA670036F742 /* qp.png */; settings = {ASSET_TAGS = (); }; };
+		3F02F89D1DCDCA670036F742 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F8991DCDCA670036F742 /* stop.png */; settings = {ASSET_TAGS = (); }; };
+		3F02F89E1DCDCA670036F742 /* ax.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F89A1DCDCA670036F742 /* ax.png */; settings = {ASSET_TAGS = (); }; };
+		3F02F8A01DCDCAFD0036F742 /* ax1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F89F1DCDCAFD0036F742 /* ax1.png */; settings = {ASSET_TAGS = (); }; };
 		3F13FD5D1DC9BA8100B429C4 /* FacilitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD5C1DC9BA8100B429C4 /* FacilitiesModel.m */; };
 		3F13FD601DC9BAA700B429C4 /* FacilitiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD5F1DC9BAA700B429C4 /* FacilitiesVC.m */; };
 		3F13FD631DC9BACB00B429C4 /* FacilitiesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD621DC9BACB00B429C4 /* FacilitiesCell.m */; };
@@ -250,10 +252,12 @@
 		3F02F8851DCD71CB0036F742 /* zy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zy.png; sourceTree = "<group>"; };
 		3F02F8891DCD79D40036F742 /* zy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zy1.png; sourceTree = "<group>"; };
 		3F02F88A1DCD79D40036F742 /* sp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sp1.png; sourceTree = "<group>"; };
-		3F02F88D1DCD8DF50036F742 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
-		3F02F88E1DCD8DF50036F742 /* action.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = action.png; sourceTree = "<group>"; };
-		3F02F8921DCDB9830036F742 /* qp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qp.png; sourceTree = "<group>"; };
 		3F02F8951DCDBED80036F742 /* sc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sc.png; sourceTree = "<group>"; };
+		3F02F8971DCDCA670036F742 /* action.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = action.png; sourceTree = "<group>"; };
+		3F02F8981DCDCA670036F742 /* qp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qp.png; sourceTree = "<group>"; };
+		3F02F8991DCDCA670036F742 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		3F02F89A1DCDCA670036F742 /* ax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ax.png; sourceTree = "<group>"; };
+		3F02F89F1DCDCAFD0036F742 /* ax1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ax1.png; sourceTree = "<group>"; };
 		3F13FD5B1DC9BA8100B429C4 /* FacilitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacilitiesModel.h; sourceTree = "<group>"; };
 		3F13FD5C1DC9BA8100B429C4 /* FacilitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacilitiesModel.m; sourceTree = "<group>"; };
 		3F13FD5E1DC9BAA700B429C4 /* FacilitiesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacilitiesVC.h; sourceTree = "<group>"; };
@@ -1023,10 +1027,12 @@
 				3F9E35BC1DC7655A003B7478 /* BGCollecting */,
 				9DF2760D1DC1FE1000682670 /* Pic_00 */,
 				9DF276341DC1FE5C00682670 /* collect.png */,
+				3F02F89F1DCDCAFD0036F742 /* ax1.png */,
+				3F02F8971DCDCA670036F742 /* action.png */,
+				3F02F8981DCDCA670036F742 /* qp.png */,
+				3F02F8991DCDCA670036F742 /* stop.png */,
+				3F02F89A1DCDCA670036F742 /* ax.png */,
 				3F02F8951DCDBED80036F742 /* sc.png */,
-				3F02F8921DCDB9830036F742 /* qp.png */,
-				3F02F88D1DCD8DF50036F742 /* stop.png */,
-				3F02F88E1DCD8DF50036F742 /* action.png */,
 				3FEFE7251DCCAD3D00BBEBE8 /* sp.png */,
 				3F02F8851DCD71CB0036F742 /* zy.png */,
 				3F02F8891DCD79D40036F742 /* zy1.png */,
@@ -1381,7 +1387,6 @@
 				9D6F19791DC4E6AF00E9B6B0 /* favorite_4.jpg in Resources */,
 				9DF276231DC1FE1000682670 /* SoutheastAsia_1.jpg in Resources */,
 				9D6F1ADB1DC9765D00E9B6B0 /* TravelingTips_1.jpg in Resources */,
-				3F02F88F1DCD8DF50036F742 /* stop.png in Resources */,
 				3F02411C1DC733BB006305E0 /* background_5.JPG in Resources */,
 				9DF276271DC1FE1000682670 /* domestic_1.jpg in Resources */,
 				3F9E35C51DC7655A003B7478 /* overseas.jpg in Resources */,
@@ -1406,14 +1411,17 @@
 				3F299F501DC72B6200FC6BD9 /* Overseas_4.jpg in Resources */,
 				9D6F1AD31DC9765D00E9B6B0 /* TravelEquipment_1.jpg in Resources */,
 				3FFF478B1DCC5EB40013801F /* backAdvice.jpg in Resources */,
+				3F02F89E1DCDCA670036F742 /* ax.png in Resources */,
 				3F0241181DC733BB006305E0 /* background_1.JPG in Resources */,
 				3F299F501DC72B6200FC6BD9 /* Overseas_4.jpg in Resources */,
 				3F0241181DC733BB006305E0 /* background_1.JPG in Resources */,
 				3F0241261DC7744F006305E0 /* menuback.png in Resources */,
+				3F02F89B1DCDCA670036F742 /* action.png in Resources */,
 				9D6F1AD41DC9765D00E9B6B0 /* TravelEquipment_2.jpg in Resources */,
 				3F299F501DC72B6200FC6BD9 /* Overseas_4.jpg in Resources */,
 				3F0241181DC733BB006305E0 /* background_1.JPG in Resources */,
 				9DE5437E1DBE24DF006AF0F9 /* LaunchScreen.storyboard in Resources */,
+				3F02F89C1DCDCA670036F742 /* qp.png in Resources */,
 				9D6F19781DC4E6AF00E9B6B0 /* favorite_3.jpg in Resources */,
 				3F518F421DC224F400BA5D84 /* 2.png in Resources */,
 				3F9E35C61DC7655A003B7478 /* southeastAsia.jpg in Resources */,
@@ -1432,6 +1440,7 @@
 				3F299F451DC72AD900FC6BD9 /* SoutheastAsia_3.jpg in Resources */,
 				3F02411A1DC733BB006305E0 /* background_3.JPG in Resources */,
 				3F0241191DC733BB006305E0 /* background_2.JPG in Resources */,
+				3F02F89D1DCDCA670036F742 /* stop.png in Resources */,
 				3FEFE7291DCCAD3D00BBEBE8 /* sp.png in Resources */,
 				9DF276351DC1FE5C00682670 /* collect.png in Resources */,
 				9DF2762B1DC1FE1000682670 /* domestic_5.jpg in Resources */,
@@ -1443,14 +1452,12 @@
 				9D6F1AD61DC9765D00E9B6B0 /* TravelEquipment_4.jpg in Resources */,
 				9DF276281DC1FE1000682670 /* domestic_2.jpg in Resources */,
 				9D6F1ACF1DC9765D00E9B6B0 /* Hike_1.jpg in Resources */,
-				3F02F8941DCDB9830036F742 /* qp.png in Resources */,
 				9D6F1AE01DC9808A00E9B6B0 /* TravelHelth_4.jpg in Resources */,
 				9D6F1AD01DC9765D00E9B6B0 /* Hike_2.jpg in Resources */,
 				3F02F88B1DCD79D40036F742 /* zy1.png in Resources */,
 				3F0051AE1DC37E23009143CB /* 4.png in Resources */,
 				9D6F1ADC1DC9765D00E9B6B0 /* TravelingTips_2.jpg in Resources */,
 				9DF276321DC1FE1000682670 /* island_3.jpg in Resources */,
-				3F02F8901DCD8DF50036F742 /* action.png in Resources */,
 				3FFF47891DCC5EAF0013801F /* back_about.jpg in Resources */,
 				3F02F8871DCD71CB0036F742 /* zy.png in Resources */,
 				3F02411B1DC733BB006305E0 /* background_4.JPG in Resources */,
@@ -1459,6 +1466,7 @@
 				3F0241111DC730D2006305E0 /* back.png in Resources */,
 				9D1350C51DC05BEA00B26D62 /* menu.png in Resources */,
 				9D1350C31DC05B1100B26D62 /* background.jpg in Resources */,
+				3F02F8A01DCDCAFD0036F742 /* ax1.png in Resources */,
 				9D6F1AD21DC9765D00E9B6B0 /* Hike_4.jpg in Resources */,
 				9D6F1CD91DCD7AE600E9B6B0 /* TYVideoPlayer.bundle in Resources */,
 				3F02F8841DCD71B30036F742 /* (null) in Resources */,
