@@ -346,9 +346,51 @@
         //关闭按钮
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
         button.frame = CGRectMake( 0, 64, 30, 30);
-        [button setTitle:@"关闭" forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:@"sc.png"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(closeVideo) forControlEvents:UIControlEventTouchUpInside];
         [_vedioView addSubview:button];
+        
+        
+        
+        //设置收藏按钮
+        UIImage *norImage =  [UIImage imageNamed:@"4.png"];
+        norImage = [norImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *selImage =  [UIImage imageNamed:@"5.png"];
+        selImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
+        UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame=CGRectMake(kScreendWidth-40 ,64, 40, 40);
+        [btn setImage:norImage forState:UIControlStateNormal];
+        [btn setImage:selImage forState:UIControlStateSelected];
+        //设置按钮选中状态
+        btn.selected = NO;
+        [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+        [_vedioView addSubview:btn];
+        
+        //设置播放/暂停按钮
+        UIImage *norImage1 =  [UIImage imageNamed:@"action.png"];
+        norImage1 = [norImage1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *selImage1 =  [UIImage imageNamed:@"stop.png"];
+        selImage1 = [selImage1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
+        UIButton *btn1=[UIButton buttonWithType:UIButtonTypeCustom];
+        btn1.frame=CGRectMake(0 ,kScreendHeight/1.7, 35, 35);
+        [btn1 setImage:norImage1 forState:UIControlStateNormal];
+        [btn1 setImage:selImage1 forState:UIControlStateSelected];
+        //设置按钮选中状态
+        btn1.selected = NO;
+        [btn1 addTarget:self action:@selector(bfAction:) forControlEvents:UIControlEventTouchUpInside];
+        [_vedioView addSubview:btn1];
+        
+        
+        //设置全屏按钮
+        UIButton *qpbtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        qpbtn.frame = CGRectMake( kScreendWidth-40, kScreendHeight/1.7, 30, 30);
+        [qpbtn setBackgroundImage:[UIImage imageNamed:@"qp.png"] forState:UIControlStateNormal];
+        [qpbtn addTarget:self action:@selector(qpVideo) forControlEvents:UIControlEventTouchUpInside];
+        [_vedioView addSubview:qpbtn];
+        
+        
         
         
         
@@ -357,6 +399,20 @@
         [self.view addSubview:_vedioView];
     }
     return _vedioView;
+}
+-(void)bfAction:(UIButton *)btn
+{
+    btn.selected = !btn.selected;
+    NSLog(@"点击了播放/暂停");
+}
+-(void)qpVideo
+{
+    NSLog(@"点击了全屏");
+}
+-(void)btnAction:(UIButton *)btn
+{
+    btn.selected = !btn.selected;
+    NSLog(@"点击了收藏");
 }
 //视频关闭按钮事件
 -(void)closeVideo

@@ -23,6 +23,8 @@
 
 @property(nonatomic,assign)NSInteger i;
 
+@property(nonatomic,assign)NSInteger j;
+
 @end
 
 @implementation TravelHealthVC
@@ -149,12 +151,17 @@
     if (self.dataArray.count == 0) {
         self.i = 1;
         [self loadData];
-    }else{
-        
-        self.i = 0;
+    }else
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.dataArray removeAllObjects];
+            [self.tableview reloadData];
+        });
+        self.i=1;
         [self loadData];
-        
     }
+
+    
     
     
     // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
@@ -171,14 +178,10 @@
 - (void)footerRereshing
 {
     // 1.添加假数据
-    if (self.i == 0) {
-        self.i = 1;
-        self.i += 1;
-        [self loadData];
-    }else{
-        self.i += 1;
-        [self loadData];
-    }
+    
+    self.i += 1;
+    [self loadData];
+    
     
     // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -297,9 +300,13 @@
     if (velocity.y > 0) {
         [self.navigationController setNavigationBarHidden:YES animated:YES];
         self.tableview.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+        self.tabBarController.tabBar.hidden = YES;
+
     }else{
         [self.navigationController setNavigationBarHidden:NO animated:YES];
         self.tableview.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight-64);
+        self.tabBarController.tabBar.hidden = NO;
+
     }
 }
 - (void)didReceiveMemoryWarning {

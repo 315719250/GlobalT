@@ -300,9 +300,11 @@
     if (velocity.y > 0) {
         [self.navigationController setNavigationBarHidden:YES animated:YES];
         self.tableview.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+        self.tabBarController.tabBar.hidden = YES;
     }else{
         [self.navigationController setNavigationBarHidden:NO animated:YES];
         self.tableview.frame =CGRectMake(0, 64, kScreenWidth, kScreenHeight-64);
+        self.tabBarController.tabBar.hidden = NO;
     }
 }
 - (void)didReceiveMemoryWarning {
