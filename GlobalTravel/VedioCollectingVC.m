@@ -46,6 +46,8 @@
     nav.backgroundColor = [UIColor colorWithRed:0.435 green:0.322 blue:0.658 alpha:1.000];
     [self.view addSubview:nav];
     
+    self.title = @"收藏夹";
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(5, 17, 50, 30);
     [button setTitle:@"返回" forState:UIControlStateNormal];
@@ -71,11 +73,20 @@
 //    self.navigationItem.title = @"收藏夹_轻松一刻";
     self.view.backgroundColor = [UIColor whiteColor];
     
+    UIImage *img = [UIImage imageNamed:@"back.png"];
+    //设置图片本身不被修改
+    img = [img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:img style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+    
     [self createtableview];
     
     [self loadData];
     [self.tableview registerClass:[RelexMomentCell class] forCellReuseIdentifier:@"cell"];
     [self.view sendSubviewToBack:self.vedioView];
+}
+-(void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark UITabelView代理方法

@@ -61,8 +61,16 @@
     
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:btn];
     [btn addTarget:self action:@selector(editAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIImage *img = [UIImage imageNamed:@"2.png"];
+    //设置图片本身不被修改
+    img = [img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:img style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
 }
-
+-(void)backAction
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 //收藏按钮
 -(void)editAction:(UIButton *)btn
 {
@@ -78,6 +86,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.title = @"视频";
     [self createBtn];
     [self createUI];
     
@@ -90,17 +100,19 @@
 -(void)createUI
 {
     //头像
-    self.headImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 64, 50, 50)];
+    self.headImgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 74, kScreendWidth/5, kScreendWidth/5)];
     [self.headImgView sd_setImageWithURL:[NSURL URLWithString:self.model.avatar]];
+    self.headImgView.layer.cornerRadius =kScreendWidth/5/2;
+    self.headImgView.layer.masksToBounds = YES;
+    self.headImgView.clipsToBounds = YES;
     //发布者名称
-    self.AuthorName = [[UILabel alloc]initWithFrame:CGRectMake(50, 64, kScreendWidth - 50, 50)];
+    self.AuthorName = [[UILabel alloc]initWithFrame:CGRectMake(kScreendWidth/3, kScreendHeight/10, kScreendWidth *2/3, kScreendHeight/10)];
     self.AuthorName.text = self.model.screen_name;
     
     //描述
-    self.descLabel = [[UILabel alloc]initWithFrame:CGRectMake(0,(kScreendWidth-20)*15/16, kScreendWidth, kScreendHeight - (120+(kScreendWidth-20)*12/16 - 49))];
+    self.descLabel = [[UILabel alloc]initWithFrame:CGRectMake(10,kScreendHeight/1.8, kScreendWidth-20, kScreendHeight/2.5)];
     self.descLabel.numberOfLines=0;
     self.descLabel.text = self.model.caption;
-    
     [self.view addSubview:self.headImgView];
     [self.view addSubview:self.AuthorName];
     
@@ -115,7 +127,7 @@
     
 //    _playerView.frame  = CGRectMake(0, (kScreendHeight-103-CGRectGetWidth(self.view.frame)*9/16)/2, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame)*9/16);
     
-    _playerView.frame = CGRectMake(10, 120, kScreendWidth-20,(kScreendWidth-20)*12/16);
+    _playerView.frame = CGRectMake(10, kScreendHeight/4, kScreendWidth-20,(kScreendWidth-20)*12/16);
 }
 
 - (void)addPlayerView
