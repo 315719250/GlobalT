@@ -13,9 +13,10 @@
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface FirstViewController ()
+@interface FirstViewController ()<UIScrollViewDelegate>
 
 @property(nonatomic,strong)UIScrollView * scrollView;
+@property(nonatomic,strong)UIPageControl *page;
 
 @end
 
@@ -28,23 +29,35 @@
     self.scrollView.backgroundColor = [UIColor magentaColor];
     [self.view addSubview:self.scrollView];
     
-    self.scrollView.contentSize = CGSizeMake(kScreenWidth*3, kScreenHeight);
+    self.scrollView.contentSize = CGSizeMake(kScreenWidth*4, kScreenHeight);
     
-    for (int i =0; i<2; i++) {
+    for (int i =0; i<4; i++) {
         //导入图片
-        NSString * imgName = [NSString stringWithFormat:@"0%d.jpg",i+1];
+        NSString * imgName = [NSString stringWithFormat:@"000%d.jpg",i+1];
         UIImage * image = [UIImage imageNamed:imgName];
         //创建ImageView
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth*i, 0, kScreenWidth, kScreenHeight)];
         imageView.image = image;
         [self.scrollView addSubview:imageView];
         
+        //创建毛玻璃样式
+        UIBlurEffect *effect=[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+        
+        //创建一个view装毛玻璃样式
+        UIVisualEffectView *effectView=[[UIVisualEffectView alloc]initWithEffect:effect];
+        
+        effectView.frame=CGRectMake(0, 0, kScreenWidth,kScreenHeight);
+        
+        effectView.alpha = 0.3;
+        
+        [imageView addSubview:effectView];
+        
     }
     
     NSString * imgName3 = [NSString stringWithFormat:@"background.jpg"];
     UIImage * image = [UIImage imageNamed:imgName3];
     //创建ImageView
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth*2, 0, kScreenWidth, kScreenHeight)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth*3, 0, kScreenWidth, kScreenHeight)];
     imageView.image = image;
     [self.scrollView addSubview:imageView];
     
@@ -62,10 +75,11 @@
     effectView.alpha = 0.5;
     
     [imageView addSubview:effectView];
+    
 
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    btn.frame=CGRectMake(kScreenWidth*9/4, kScreenHeight*7/10, kScreenWidth/2, kScreenHeight/10);
+    btn.frame=CGRectMake(kScreenWidth*13/4, kScreenHeight*7/10, kScreenWidth/2, kScreenHeight/10);
     btn.backgroundColor = [UIColor clearColor];
     [btn setTitle:@"马上体验" forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize:18];
@@ -79,7 +93,7 @@
     [btn setImage:img forState:UIControlStateNormal];
         [self.scrollView addSubview:btn];
     
-    UILabel *label_01 = [[UILabel alloc]initWithFrame:CGRectMake(kScreenWidth*11/5, kScreenHeight/5, kScreenWidth*3/5, kScreenHeight/2)];
+    UILabel *label_01 = [[UILabel alloc]initWithFrame:CGRectMake(kScreenWidth*16/5, kScreenHeight/5, kScreenWidth*3/5, kScreenHeight*3/5)];
     label_01.backgroundColor = [UIColor clearColor];
     label_01.text = @"一个人旅行，\n不理会繁杂的琐事，\n自由自在地，\n去体验一个城市，\n一段故事，\n留下一片欢笑。";
     label_01.numberOfLines = 6;
@@ -87,10 +101,52 @@
     label_01.font = [UIFont systemFontOfSize:25];
     
     [self.scrollView addSubview:label_01];
+    
+    NSArray *array = @[@"人生至少要有两次冲动，\n一为奋不顾身的爱情，\n一为说走就走的旅行。",@"旅行是为了离开，\n旅行是对庸常生活的一次越狱。",@"那个梦想中的自己，\n那个曾经丢失的自己，\n那个豁然开朗的自己。\n然后在世界的某个地方相聚，开怀。"];
+    
+    
+    for (int i = 0; i<3; i++) {
+        UILabel *label_01 = [[UILabel alloc]initWithFrame:CGRectMake(kScreenWidth*(i*10+1)/10, kScreenHeight/10, kScreenWidth*4/5, kScreenHeight*4/5)];
+        label_01.backgroundColor = [UIColor clearColor];
+        label_01.text = array[i];
+        label_01.numberOfLines = 6;
+        //设置文本的字体
+        label_01.font = [UIFont systemFontOfSize:25];
+        
+        [self.scrollView addSubview:label_01];
+    }
+    self.scrollView.delegate = self;
+   
+    
+    self.page = [[UIPageControl alloc]initWithFrame:CGRectMake(0, kScreenHeight-30, kScreenWidth, 30)];
+    [self.view addSubview:self.page];
+    self.page.numberOfPages = 4;
+    
+    [self.page addTarget:self action:@selector(pageAction:) forControlEvents:UIControlEventValueChanged];
+    
+//    self.scrollView.contentOffset = CGPointMake(0, 0);
+//    self.page.currentPage = 0;
 
     
     // Do any additional setup after loading the view.
 }
+
+-(void)pageAction:(UIPageControl * )page
+{
+    [self.scrollView setContentOffset:CGPointMake(kScreenWidth *page.currentPage, 0) animated:YES];
+}
+
+
+
+#pragma mark 结束减速--停止滚动
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSInteger page = scrollView.contentOffset.x/scrollView.bounds.size.width;
+    [self.page setCurrentPage:page];
+}
+
+
+
 
 -(UIViewController *)creatVCwithClass:(Class)class tittle:(NSString *)title
                           normalImage:(NSString *)normalImage
