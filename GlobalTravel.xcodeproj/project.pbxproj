@@ -41,6 +41,9 @@
 		3F02F89E1DCDCA670036F742 /* ax.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F89A1DCDCA670036F742 /* ax.png */; };
 		3F02F8A01DCDCAFD0036F742 /* ax1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02F89F1DCDCAFD0036F742 /* ax1.png */; };
 		3F04D9B81DCDE22E0036EEE2 /* 003.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F04D9B71DCDE22E0036EEE2 /* 003.png */; settings = {ASSET_TAGS = (); }; };
+		3F04D9A91DCDCF910036EEE2 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F04D9A71DCDCF910036EEE2 /* 02.jpg */; };
+		3F04D9AA1DCDCF910036EEE2 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F04D9A81DCDCF910036EEE2 /* 01.jpg */; };
+		3F04D9B81DCDE22E0036EEE2 /* 003.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F04D9B71DCDE22E0036EEE2 /* 003.png */; };
 		3F13FD5D1DC9BA8100B429C4 /* FacilitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD5C1DC9BA8100B429C4 /* FacilitiesModel.m */; };
 		3F13FD601DC9BAA700B429C4 /* FacilitiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD5F1DC9BAA700B429C4 /* FacilitiesVC.m */; };
 		3F13FD631DC9BACB00B429C4 /* FacilitiesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13FD621DC9BACB00B429C4 /* FacilitiesCell.m */; };
@@ -65,7 +68,7 @@
 		3F518F411DC224F400BA5D84 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F518F3E1DC224F400BA5D84 /* 1.png */; };
 		3F518F421DC224F400BA5D84 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F518F3F1DC224F400BA5D84 /* 2.png */; };
 		3F518F431DC224F400BA5D84 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F518F401DC224F400BA5D84 /* 3.png */; };
-		3F8CF6CC1DCD6B5000119E5A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CF6CB1DCD6B5000119E5A /* FirstViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3F8CF6CC1DCD6B5000119E5A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CF6CB1DCD6B5000119E5A /* FirstViewController.m */; };
 		3F9E35B51DC73A5B003B7478 /* AdviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9E35B41DC73A5B003B7478 /* AdviceVC.m */; };
 		3F9E35B81DC74975003B7478 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9E35B71DC74975003B7478 /* HelpVC.m */; };
 		3F9E35BB1DC74C1E003B7478 /* advice.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F9E35BA1DC74C1E003B7478 /* advice.jpg */; };

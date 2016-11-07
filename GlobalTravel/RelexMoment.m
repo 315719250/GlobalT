@@ -97,7 +97,7 @@
         }
         else
         {
-            [self.tableview headerEndRefreshing];
+//            [self.tableview headerEndRefreshing];
             [self createAlert];
             NSLog(@"error=%@",error);
             NSLog(@"网络请求失败");
