@@ -1,5 +1,5 @@
 //
-//  VedioVC.h
+//  VedioCollectingVC.h
 //  GlobalTravel
 //
 //  Created by john.zhang on 16/11/5.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RelexMomentModel.h"
 
-@interface VedioVC : UIViewController
-
-@property(nonatomic,strong)RelexMomentModel *model;
+@interface VedioCollectingVC : UIViewController
 
 @end

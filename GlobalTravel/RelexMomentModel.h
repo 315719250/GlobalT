@@ -18,4 +18,6 @@
 @property(nonatomic,strong)NSString *cover_pic;
 
 @property(nonatomic,strong)NSString *VideoUrl;
+
+@property(nonatomic,strong)NSString *caption;
 @end

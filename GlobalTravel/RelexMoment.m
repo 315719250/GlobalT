@@ -12,9 +12,12 @@
 #import "RelexMomentCell.h"
 #import "RelexMomentModel.h"
 #import "MJRefresh.h"
-#import "VedioVC.h"
 #import "TYVideoPlayer.h"
 #import "TYVideoPlayerView.h"
+#import "TYVideoPlayerController.h"
+#import "VedioCollectingVC.h"
+#import "FMDBTool.h"
+#import "VedioController.h"
 
 #define kScreendWidth [UIScreen mainScreen].bounds.size.width
 #define kScreendHeight [UIScreen mainScreen].bounds.size.height
@@ -30,6 +33,20 @@
 @property (nonatomic, weak) TYVideoPlayerView *playerView;
 @property(nonatomic,strong)UIView *vedioView;
 
+//点击全屏穿的视频url
+@property(nonatomic,strong)NSString *url;
+//HTML的url
+@property(nonatomic,strong)NSString *HTMLurl;
+
+//监听播放状态
+@property(nonatomic,assign)NSInteger isPaly;
+
+
+//播放按钮
+@property(nonatomic,strong)UIButton *btn1;
+
+//爱心按钮
+@property(nonatomic,strong)UIButton *btn2;
 @end
 
 @implementation RelexMoment
@@ -59,6 +76,7 @@
                 
                 model.cover_pic=dic[@"cover_pic"];
                 model.recommend_caption=dict[@"recommend_caption"];
+                model.caption=dic[@"caption"];
                 model.VideoUrl = dic[@"url"];
                 NSLog(@"HTML网页url：%@",dic[@"url"]);
          
@@ -138,13 +156,15 @@
 
 -(void)createtableview
 {
-    self.tableview = [[UITableView alloc]initWithFrame:CGRectMake(0,64, kScreendWidth, kScreendHeight-64) style:UITableViewStyleGrouped];
+    self.tableview = [[UITableView alloc]initWithFrame:CGRectMake(0,0, kScreendWidth, kScreendHeight) style:UITableViewStylePlain];
     self.tableview.separatorStyle = NO;
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
     [self.view addSubview:self.tableview];
     
 }
+
+
 /**
  *  集成刷新控件
  */
@@ -223,6 +243,29 @@
     });
 }
 
+//收藏夹按钮
+-(void)CollectedBtn
+{
+    UIImage *img = [UIImage imageNamed:@"collect.png"];
+    //设置图片本身不被修改
+    img = [img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    UIBarButtonItem *menuBtn = [[UIBarButtonItem alloc]initWithImage:img style:UIBarButtonItemStylePlain target:self action:@selector(collectAction)];
+    
+    self.navigationItem.rightBarButtonItem = menuBtn;
+}
+//收藏夹点击事件
+-(void)collectAction{
+    NSLog(@"点击了收藏夹");
+    
+    [self.videoPlayer pause];
+    
+    VedioCollectingVC *vc = [[VedioCollectingVC alloc]init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+//    [self presentViewController:vc animated:YES completion:nil];
+    
+}
 
 
 -(NSMutableArray *)dataArray{
@@ -238,25 +281,19 @@
     
     self.navigationItem.title = @"轻松一刻";
     
+    //创建收藏按钮
+    [self CollectedBtn];
+    
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0.435 green:0.322 blue:0.658 alpha:1.000];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
     [self createtableview];
-   
-    
+
     [self setupRefresh];
-    
+
     [self.tableview registerClass:[RelexMomentCell class] forCellReuseIdentifier:@"cell"];
     
-    //创建视频
-    [self.view sendSubviewToBack:self.vedioView];
-    [self addPlayerView];
-    [self addVideoPlayer];
-    
-
-
 }
 
 
@@ -267,6 +304,7 @@
     return kScreendHeight/2;
 }
 
+//返回分区高度
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 0.00000001;
@@ -285,191 +323,28 @@
     cell.nameLabel.text = model.screen_name;
     cell.titleLabel.text = model.recommend_caption;
     
-    
-    CGFloat w = self.view.frame.size.width;
-    CGFloat h = kScreendHeight/2;
-    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
-    //设置按钮的背景图片
-    UIImage *normallImage = [UIImage imageNamed:@"bf.png"];
-    UIImage *seletImage = [UIImage imageNamed:@"bf2.png"];
-    [btn setBackgroundImage:normallImage forState:UIControlStateNormal];
-    [btn setBackgroundImage:seletImage forState:UIControlStateHighlighted];
-    btn.frame = CGRectMake((w-80)/2, h/2, 80,80);
-    
-    btn.tag = indexPath.row;
-    
-    [btn addTarget:self action:@selector(btnclicked:) forControlEvents:UIControlEventTouchUpInside];
-    [cell addSubview:btn];
-    
     cell.selectionStyle = NO;
     
     return cell;
-}
-
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    VedioVC  *vc = [[VedioVC alloc]init];
-//    vc.model = self.dataArray[indexPath.row];
-//    [self.navigationController pushViewController:vc animated:YES];
-//}
-
-
-#pragma mark 播放视频
--(void)btnclicked:(UIButton *)btn
-{
-
-    self.tabBarController.tabBar.hidden = NO;
-    NSLog(@"点击了播放按钮");
-    [self.view bringSubviewToFront:self.vedioView];
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self loadVideo:btn.tag];
-    });
-
     
 }
 
-//懒加载
--(UIView *)vedioView
-{
-    if (_vedioView == nil) {
-        _vedioView = [[UIView alloc]init];
-        _vedioView.frame = self.view.bounds;
-        _vedioView.backgroundColor = [UIColor clearColor];
-        
-        //背景毛玻璃效果
-        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-        UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:effect];
-        effectView.frame =self.view.bounds;
-        effectView.alpha = 0.75;
-        [_vedioView addSubview:effectView];
-        
-        //关闭按钮
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-        button.frame = CGRectMake( 5, 69, 35, 35);
-        [button setBackgroundImage:[UIImage imageNamed:@"sc.png"] forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(closeVideo) forControlEvents:UIControlEventTouchUpInside];
-        [_vedioView addSubview:button];
-        
-        
-        
-        //设置收藏按钮
-        UIImage *norImage =  [UIImage imageNamed:@"ax.png"];
-        norImage = [norImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        UIImage *selImage =  [UIImage imageNamed:@"ax1.png"];
-        selImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        
-        UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame=CGRectMake(kScreendWidth-40 ,69, 35, 35);
-        [btn setImage:norImage forState:UIControlStateNormal];
-        [btn setImage:selImage forState:UIControlStateSelected];
-        //设置按钮选中状态
-        btn.selected = NO;
-        [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-        [_vedioView addSubview:btn];
-        
-        //设置播放/暂停按钮
-        UIImage *norImage1 =  [UIImage imageNamed:@"action.png"];
-        norImage1 = [norImage1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        UIImage *selImage1 =  [UIImage imageNamed:@"stop.png"];
-        selImage1 = [selImage1 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        
-        UIButton *btn1=[UIButton buttonWithType:UIButtonTypeCustom];
-        btn1.frame=CGRectMake(5 ,kScreendHeight/1.7, 35, 35);
-        [btn1 setImage:norImage1 forState:UIControlStateNormal];
-        [btn1 setImage:selImage1 forState:UIControlStateSelected];
-        //设置按钮选中状态
-        btn1.selected = NO;
-        [btn1 addTarget:self action:@selector(bfAction:) forControlEvents:UIControlEventTouchUpInside];
-        [_vedioView addSubview:btn1];
-        
-        
-        //设置全屏按钮
-        UIButton *qpbtn = [UIButton buttonWithType:UIButtonTypeSystem];
-        qpbtn.frame = CGRectMake( kScreendWidth-40, kScreendHeight/1.7, 35, 35);
-        [qpbtn setBackgroundImage:[UIImage imageNamed:@"qp.png"] forState:UIControlStateNormal];
-        [qpbtn addTarget:self action:@selector(qpVideo) forControlEvents:UIControlEventTouchUpInside];
-        [_vedioView addSubview:qpbtn];
-        
-        
-        
-        
-        
 
-
-        [self.view addSubview:_vedioView];
-    }
-    return _vedioView;
-}
--(void)bfAction:(UIButton *)btn
+//点击cell
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    btn.selected = !btn.selected;
-    NSLog(@"点击了播放/暂停");
-}
--(void)qpVideo
-{
-    NSLog(@"点击了全屏");
-}
--(void)btnAction:(UIButton *)btn
-{
-    btn.selected = !btn.selected;
-    NSLog(@"点击了收藏");
-}
-//视频关闭按钮事件
--(void)closeVideo
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.videoPlayer stop];
-    });
-    [self.view sendSubviewToBack:self.vedioView];
+    VedioController *vc = [[VedioController alloc]init];
     
-}
-- (void)viewWillLayoutSubviews
-{
-    [super viewWillLayoutSubviews];
+    RelexMomentModel *m = self.dataArray[indexPath.row];
+    vc.model =m;
     
-    _playerView.frame  = CGRectMake(0, (kScreendHeight-103-CGRectGetWidth(self.view.frame)*9/16)/2, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame)*9/16);
+    vc.VedioUrl =[self VideoJX:m.VideoUrl];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)addPlayerView
-{
-    TYVideoPlayerView *playerView = [[TYVideoPlayerView alloc]init];
-    playerView.backgroundColor = [UIColor blackColor];
-    [self.vedioView addSubview:playerView];
-    _playerView = playerView;
-}
 
-- (void)addVideoPlayer
-{
-    TYVideoPlayer *videoPlayer = [[TYVideoPlayer alloc]init];
-    videoPlayer.delegate = self;
-    _videoPlayer = videoPlayer;
-}
 
-- (void)loadVideo:(NSInteger)index
-{
-    RelexMomentModel *model = self.dataArray[index];
-    NSString *urlString =[self VideoJX:model.VideoUrl];
-    NSURL *streamURL = [NSURL URLWithString:urlString];
-    [_videoPlayer loadVideoWithStreamURL:streamURL playerLayerView:_playerView];
-    _videoPlayer.track.continueLastWatchTime = YES;
-
-}
-
-#pragma mark - TYVideoPlayerDelegate
-
-- (void)videoPlayer:(TYVideoPlayer*)videoPlayer track:(id<TYVideoPlayerTrack>)track didChangeToState:(TYVideoPlayerState)toState fromState:(TYVideoPlayerState)fromState
-{
-    switch (toState) {
-        case TYVideoPlayerStateContentReadyToPlay:
-            //[videoPlayer seekToLastWatchTime];
-            [videoPlayer play];
-            break;
-            
-        default:
-            break;
-    }
-}
 //继承于scrollView的方法
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 {
@@ -479,6 +354,8 @@
         self.tabBarController.tabBar.hidden = NO;
     }
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

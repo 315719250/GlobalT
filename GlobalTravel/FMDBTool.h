@@ -11,6 +11,7 @@
 #import "TravelingTipsModel.h"
 #import "FacilitiesModel.h"
 #import "HikingModel.h"
+#import "RelexMomentModel.h"
 
 @interface FMDBTool : NSObject
 
@@ -59,6 +60,16 @@
 
 //查找
 +(NSArray *)searchHiking;
+
+#pragma mark Vedio
+//添加
++(void)addVedio:(RelexMomentModel *)model;
+
+//删除
++(void)deleteVedio:(RelexMomentModel *)model;
+
+//查找
++(NSArray *)searchVedio;
 
 
 @end

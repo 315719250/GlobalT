@@ -79,7 +79,7 @@
 #pragma mark cell高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return kScreenHeight/4.5;
+    return (kScreenHeight-64)/2;
 }
 
 #pragma mark cell数量

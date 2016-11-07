@@ -71,6 +71,16 @@ NSString *_path;
             NSLog(@"Hiking建表失败");
             NSLog(@"错误%d",result6);
         }
+        
+            //创建视频表
+        int result = [_db executeUpdate:@"create table if not exists Vedio(avatar text,screen_name text,recommend_caption text,cover_pic text,VideoUrl text,caption text);"];
+        if (result) {
+            NSLog(@"Vedio建表成功");
+        }else
+        {
+            NSLog(@"Vedio建表失败");
+            NSLog(@"错误%d",result);
+        }
 
         
         }else
@@ -305,6 +315,64 @@ NSString *_path;
     return [dataArray copy];
 
 }
+
+#pragma mark Vedio
+//添加
++(void)addVedio:(RelexMomentModel *)model
+{
+    //avatar text,screen_name text,recommend_caption text,cover_pic text,VideoUrl text
+    [_db open];
+    //不确定的参数用？但是后面必须是OC对象
+    int result =   [_db executeUpdate:@"INSERT INTO Vedio(avatar ,screen_name ,recommend_caption ,cover_pic ,VideoUrl,caption) values(?,?,?,?,?,?);",model.avatar,model.screen_name,model.recommend_caption,model.cover_pic,model.VideoUrl,model.caption];
+    if (result) {
+        NSLog(@"添加成功");
+    }else{
+        NSLog(@"添加失败");
+    }
+    [_db close];
+}
+
+//删除
++(void)deleteVedio:(RelexMomentModel *)model
+{
+    [_db open];
+    int result =[_db executeUpdate:@"DELETE FROM Vedio WHERE VideoUrl = ?",model.VideoUrl];
+    if (result) {
+        NSLog(@"删除成功");
+    }else{
+        NSLog(@"删除失败");
+        
+    }
+    [_db close];
+
+}
+
+//查找
++(NSArray *)searchVedio
+{
+    [_db open];
+    //返回值是一个结果集
+    FMResultSet *resultSet = [_db executeQuery:@"SELECT * FROM Vedio"];
+    
+    NSMutableArray *dataArray = [[NSMutableArray alloc]init];
+    //遍历结果集
+    while ([resultSet next]) {
+        //avatar ,screen_name ,recommend_caption ,cover_pic ,VideoUrl
+        RelexMomentModel *model = [[RelexMomentModel alloc]init];
+        model.avatar = [resultSet objectForColumnName:@"avatar"];
+        model.screen_name = [resultSet objectForColumnName:@"screen_name"];
+        model.recommend_caption = [resultSet objectForColumnName:@"recommend_caption"];
+        model.cover_pic = [resultSet objectForColumnName:@"cover_pic"];
+        model.VideoUrl = [resultSet objectForColumnName:@"VideoUrl"];
+        model.caption= [resultSet objectForColumnName:@"caption"];
+        [dataArray addObject:model];
+    }
+    [_db close];
+    
+    return [dataArray copy];
+
+}
+
 
 
 

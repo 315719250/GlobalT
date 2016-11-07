@@ -429,9 +429,6 @@
     });
 
 }
-
-
-
 #pragma mark - SDCycleScrollViewDelegate
 
 //- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
