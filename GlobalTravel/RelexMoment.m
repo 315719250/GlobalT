@@ -162,6 +162,7 @@
     self.tableview.dataSource = self;
     [self.view addSubview:self.tableview];
     
+    
 }
 
 
@@ -210,7 +211,7 @@
     
     
 //     2.模拟3秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         // 刷新表格
         [self.tableview reloadData];
@@ -301,6 +302,7 @@
 #pragma mark UITabelView代理方法
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     return kScreendHeight/2;
 }
 

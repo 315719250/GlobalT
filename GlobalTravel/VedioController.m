@@ -27,6 +27,8 @@
 
 @property(nonatomic,strong)UILabel *descLabel;
 
+@property (nonatomic,strong)UIButton *btn;
+
 @property (nonatomic, strong) TYVideoPlayer *videoPlayer;
 @property (nonatomic, weak) TYVideoPlayerView *playerView;
 
@@ -110,16 +112,35 @@
     self.AuthorName.text = self.model.screen_name;
     
     //描述
-    self.descLabel = [[UILabel alloc]initWithFrame:CGRectMake(10,kScreendHeight/1.8, kScreendWidth-20, kScreendHeight/2.5)];
+    self.descLabel = [[UILabel alloc]initWithFrame:CGRectMake(10,kScreendHeight/1.6, kScreendWidth-20, kScreendHeight/2.5)];
     self.descLabel.numberOfLines=0;
     self.descLabel.text = self.model.caption;
+    
+    UIImage *norImage =  [UIImage imageNamed:@"action.png"];
+    norImage = [norImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selImage =  [UIImage imageNamed:@"stop.png"];
+    selImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    self.btn=[UIButton buttonWithType:UIButtonTypeCustom];
+    self.btn.frame=CGRectMake((kScreendWidth-50)/2 , kScreendHeight/1.5, 50, 50);
+    [self.btn setImage:norImage forState:UIControlStateNormal];
+    [self.btn setImage:selImage forState:UIControlStateSelected];
+    [self.btn addTarget:self action:@selector(Action:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //设置按钮选中状态
+    self.btn.selected = NO;
+    
+    
     [self.view addSubview:self.headImgView];
     [self.view addSubview:self.AuthorName];
-    
+    [self.view addSubview:self.btn];
     [self.view addSubview:self.descLabel];
     
 }
-
+-(void)Action:(UIButton *)btn
+{
+    btn.selected = !btn.selected;
+}
 //视频布局
 - (void)viewWillLayoutSubviews
 {
