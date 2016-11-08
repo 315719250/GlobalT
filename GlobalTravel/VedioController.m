@@ -95,7 +95,6 @@
     
     [self addPlayerView];
     [self addVideoPlayer];
-    [self loadVideo];
 }
 
 
@@ -140,6 +139,12 @@
 -(void)Action:(UIButton *)btn
 {
     btn.selected = !btn.selected;
+    if (btn.selected) {
+        [self loadVideo];
+    }else
+    {
+        [self.videoPlayer stop];
+    }
 }
 //视频布局
 - (void)viewWillLayoutSubviews
@@ -180,11 +185,43 @@
 
 }
 
+//解析HTML数据获取到对应的MP4格式的视频url
+-(NSString *)VideoJX:(NSString *)url;
+{
+    //解析HTML
+    NSString *str = url;
+    
+    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:str]];
+    
+    TFHpple * doc = [[TFHpple alloc] initWithHTMLData:data];
+    
+    NSArray *elements = [doc searchWithXPathQuery:@"//meta"];
+    NSString *vdUrl;
+    
+    for (TFHppleElement * hppleElement in elements) {
+        
+        NSDictionary *dict = hppleElement.attributes;
+        
+        for (NSString *str in dict) {
+            if ([str isEqualToString:@"content"]) {
+                NSString *str1 = dict[str];
+                if ([str1 containsString:@"https://"]&&[str1 containsString:@"mp4"]) {
+                    //获取到对应的MP4格式的视频url
+                    vdUrl = str1;
+                }
+            }
+        }
+    }
+    //    NSLog(@"%@",vdUrl);
+    return vdUrl;
+}
+
+
 //加载视频
 - (void)loadVideo
 {
-//    NSString *urlString =self.VedioUrl;
-    NSURL *streamURL = [NSURL URLWithString:self.VedioUrl];
+    NSURL *streamURL = [NSURL URLWithString:[self VideoJX:self.model.VideoUrl]];
+    
     [_videoPlayer loadVideoWithStreamURL:streamURL playerLayerView:_playerView];
     _videoPlayer.track.continueLastWatchTime = YES;
     

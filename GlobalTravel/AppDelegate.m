@@ -94,12 +94,6 @@
             self.window.rootViewController=[self createTabbarController];
         }
         
-        
-        
-
-        
-
-
     }];
 }
 

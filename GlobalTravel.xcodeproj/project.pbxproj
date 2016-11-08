@@ -66,6 +66,11 @@
 		3FCAA6571DD0751500F37CC7 /* 0002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FCAA6531DD0751500F37CC7 /* 0002.jpg */; settings = {ASSET_TAGS = (); }; };
 		3FCAA6581DD0751500F37CC7 /* 0003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FCAA6541DD0751500F37CC7 /* 0003.jpg */; settings = {ASSET_TAGS = (); }; };
 		3FCAA65C1DD076BE00F37CC7 /* 0001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FCAA65B1DD076BE00F37CC7 /* 0001.jpg */; settings = {ASSET_TAGS = (); }; };
+		3FCAA6571DD0751500F37CC7 /* 0002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FCAA6531DD0751500F37CC7 /* 0002.jpg */; };
+		3FCAA6581DD0751500F37CC7 /* 0003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FCAA6541DD0751500F37CC7 /* 0003.jpg */; };
+		3FCAA65C1DD076BE00F37CC7 /* 0001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FCAA65B1DD076BE00F37CC7 /* 0001.jpg */; };
+		3FEFE7181DCC790000BBEBE8 /* bf.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFE7171DCC790000BBEBE8 /* bf.png */; };
+		3FEFE71C1DCC7C1C00BBEBE8 /* bf2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFE71B1DCC7C1C00BBEBE8 /* bf2.png */; };
 		3FEFE7201DCC87FD00BBEBE8 /* RelexMomentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFE71F1DCC87FD00BBEBE8 /* RelexMomentCell.m */; };
 		3FEFE7231DCC881000BBEBE8 /* RelexMomentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFE7221DCC881000BBEBE8 /* RelexMomentModel.m */; };
 		3FEFE7291DCCAD3D00BBEBE8 /* sp.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFE7251DCCAD3D00BBEBE8 /* sp.png */; };
@@ -1244,7 +1249,7 @@
 				TargetAttributes = {
 					9DE5436A1DBE24DF006AF0F9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = K853XGTQA3;
+						DevelopmentTeam = 78K83VC9BC;
 					};
 					9DE543831DBE24DF006AF0F9 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1617,7 +1622,7 @@
 				INFOPLIST_FILE = GlobalTravel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lanou.GlobalTravels;
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.GlobalTravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1638,7 +1643,7 @@
 				INFOPLIST_FILE = GlobalTravel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lanou.GlobalTravels;
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.GlobalTravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -337,12 +337,12 @@
 {
     VedioController *vc = [[VedioController alloc]init];
     
-    RelexMomentModel *m = self.dataArray[indexPath.row];
-    vc.model =m;
+    vc.model = self.dataArray[indexPath.row];
     
-    vc.VedioUrl =[self VideoJX:m.VideoUrl];
-    
-    [self.navigationController pushViewController:vc animated:YES];
+    //    vc.VedioUrl =[self VideoJX:m.VideoUrl];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController pushViewController:vc animated:YES];
+    });
 }
 
 
