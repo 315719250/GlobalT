@@ -173,11 +173,11 @@
     
     //创建视图
     //咨询
-    ViewController *firstVC = (ViewController *)[self creatVCwithClass:[ViewController class] tittle:@"资讯" normalImage:@"zy.png" selectedImage:@"zy1.png"];
+    ViewController *firstVC = (ViewController *)[self creatVCwithClass:[ViewController class] tittle:nil normalImage:@"zy.png" selectedImage:@"zy1.png"];
     
     
     //视频
-    RelexMoment *relexVC = (RelexMoment *)[self creatVCwithClass:[RelexMoment class] tittle:@"视频" normalImage:@"sp.png" selectedImage:@"sp1.png"];
+    RelexMoment *relexVC = (RelexMoment *)[self creatVCwithClass:[RelexMoment class] tittle:nil normalImage:@"sp.png" selectedImage:@"sp1.png"];
     
     UINavigationController *firstNav=[[UINavigationController alloc]initWithRootViewController:firstVC];
     UINavigationController *relexNav=[[UINavigationController alloc]initWithRootViewController:relexVC];

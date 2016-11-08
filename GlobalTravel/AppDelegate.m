@@ -171,7 +171,7 @@
     
 //    tabbarVC.tabBar.translucent=NO;
     
-    tabbarVC.tabBar.barTintColor=[UIColor colorWithRed:0.937 green:0.865 blue:1.000 alpha:1.000];;
+    tabbarVC.tabBar.barTintColor=[UIColor colorWithRed:0.937 green:0.865 blue:1.000 alpha:1.000];
 
     //隐藏
     //   tabbarVC.tabBar.hidden=YES;
